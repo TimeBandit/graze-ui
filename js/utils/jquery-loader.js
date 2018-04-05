@@ -1,0 +1,1 @@
+define(['exports','../utils/plugin-factory','../utils/plugins/block'],function(a,b,c){'use strict';function d(a){return a&&a.__esModule?a:{default:a}}Object.defineProperty(a,'__esModule',{value:!0});var e=d(b),f=d(c),g=window.jQuery;(0,e.default)(g,'block',f.default),a.default=g});

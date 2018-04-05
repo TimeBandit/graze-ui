@@ -1,0 +1,1 @@
+define(['exports'],function(a){'use strict';Object.defineProperty(a,'__esModule',{value:!0}),a.default=function(a,b,c){var d={INTERNAL:'_p-data-'+b,API:'p.'+b};a.fn[b]=function(b){return this.each(function(){var e=a(this);e.data(d.INTERNAL,e.data(d.INTERNAL)||b||{}),e.data(d.API,e.data(d.API)||{}),c(a,e,e.data(d.INTERNAL),e.data(d.API))})}}});

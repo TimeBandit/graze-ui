@@ -1,0 +1,1 @@
+define(['exports'],function(a){'use strict';Object.defineProperty(a,'__esModule',{value:!0}),a.default=function(){return{getViewportSize:function(){var a=window.getComputedStyle(document.querySelector('body'),'::before');return a.getPropertyValue('content').replace(/"/g,'').replace(/'/g,'')}}}});

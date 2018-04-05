@@ -1,0 +1,1 @@
+define(["exports"],function(a){"use strict";Object.defineProperty(a,"__esModule",{value:!0}),a.extend=function(c,a){for(var b in a)a.hasOwnProperty(b)&&(c[b]=a[b]);return c},a.findAncestor=function(a,b){for(;(a=a.parentElement)&&!a.classList.contains(b););return a}});
