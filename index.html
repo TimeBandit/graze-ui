@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | The front end framework and styleguide for graze.com</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="/css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="/css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="/images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="/">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="/basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="/basics/buttons">buttons</a></li>
+                                                    <li><a href="/basics/colour-palette">colour palette</a></li>
+                                                    <li><a href="/basics/forms">forms</a></li>
+                                                    <li><a href="/basics/images">images</a></li>
+                                                    <li><a href="/basics/links">links</a></li>
+                                                    <li><a href="/basics/lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="/basics/mixins">mixins</a></li>
+                                                    <li><a href="/basics/tables">tables</a></li>
+                                                    <li><a href="/basics/typography">typography</a></li>
+                                                    <li><a href="/basics/utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="/basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="/components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="/components/accordion">accordion</a></li>
+                                                    <li><a href="/components/alerts">alerts</a></li>
+                                                    <li><a href="/components/animations">animations</a></li>
+                                                    <li><a href="/components/breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="/components/cookie-message">cookie message</a></li>
+                                                    <li><a href="/components/features">features</a></li>
+                                                    <li><a href="/components/footer">footer</a></li>
+                                                    <li><a href="/components/grid-system">grid system</a></li>
+                                                    <li><a href="/components/health-badges">health badges</a></li>
+                                                    <li><a href="/components/icons">icons</a></li>
+                                                    <li><a href="/components/navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="/components/off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="/components/page-sections">page sections</a></li>
+                                                    <li><a href="/components/pagination">pagination</a></li>
+                                                    <li><a href="/components/panels">panels</a></li>
+                                                    <li><a href="/components/progress">progress</a></li>
+                                                    <li><a href="/components/ribbons">ribbons</a></li>
+                                                    <li><a href="/components/sashes">sashes</a></li>
+                                                    <li><a href="/components/stickers">stickers</a></li>
+                                                    <li><a href="/components/tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="/components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="/examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="/examples/article-page">article page</a></li>
+                                                <li><a href="/examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="/examples/feature-page">feature page</a></li>
+                                                <li><a href="/examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="/examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="/examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="/examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="/examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <section class="page-section cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h1 class="cd-title">welcome to pistachio</h1>
+
+                <div class="cd-page-nav">
+                    <p class="cd-text cd-title">contents:</p>
+                    <ol class="cd-text"></ol>
+                </div>
+
+                <p>Welcome to our style guide and pattern library - we call it 'pistachio'. It is intended to help everyone who works with graze.com build a consistent experience for our users.</p>
+
+                <p>If you would like to provide any feedback on this, please email <a href="mailto:pistachio@graze.com">pistachio@graze.com</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section--alternate cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2 class="cd-title">branding</h2>
+
+                <p>The graze brand identity embodies our goal of making good exciting, with a look and feel that is modern, vibrant and playful and a tone of voice that is confident, positive, witty and conversational.</p>
+
+                <h2 class="cd-title">typefaces</h2>
+
+                <h1>graze pro</h1>
+
+                <p>Our main typeface, graze pro, has been designed in-house and reflects our playful and handcrafted style. It is restricted to use in <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements, and in our <a href="components/stickers">stickers</a>.</p>
+
+                <h2 class="voice">graze handwriting</h2>
+
+                <p>We also have a handwriting style font for use in captions or quotes.</p>
+
+                <p>All other copy should use Helvetica. There is further guidance on our <a href="basics/typography">typography page</a>.</p>
+
+                <h2 class="cd-title">colour palette</h2>
+
+                <p>our <a href="patterns/colour-palette">colour palette</a> is modern and exciting whilst reflecting the ‘good’ angle of our brand goal.</p>
+
+                <h2 class="cd-title">further info</h2>
+                <p>This is only a short overview and for further info or advice feel free to contact <a href="mailto:creative@graze.com">creative@graze.com</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2 class="cd-title">web design/ux principles</h2>
+
+                <ul>
+                    <li><strong>Clarity</strong>. Use clear messaging to guide the user. All buttons, links, and calls to action should have descriptive text which communicate our personality and tone of voice.</li>
+                    <li><strong>Content first</strong>. Our content should always be presented in the most appropriate semantic order to ensure the most important stuff is front and center and everything is organised in a suitable hierarchy. This in turn allows us to write lean, semantic HTML5 markup which is manageable and accessible. It also gives us a good baseline for the mobile experience.</li>
+                    <li><strong>Use white space</strong> to break up sections of the page instead of hard lines. Alternatively, use differently coloured <a href="components/page-sections">page sections</a>.</li>
+                    <li><strong>Use product photography freely</strong>. We're proud of our products and like to show them off with high quality photography.</li>
+                    <li><strong>Use illustrations freely</strong>. Like our typography, our illustrations allow us to be extremely playful and imaginative. They are core to our brand, especially within packaging, and allow us to explore taste in an exciting way.</li>
+                    <li><strong>No gimmicks</strong>. We stick with what works best and prefer to use conventional patterns rather then re-invent the wheel. We want websites everybody can use without a learning curve.</li>
+                    <li><strong>Vertical scrolling is ok</strong>. We don't obsess over keeping everything "above the fold". We focus on getting our content in a sensible order of hierachy and are relaxed about people having to scroll.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section--alternate cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2 class="cd-title">CSS guidelines</h2>
+
+                <h3 class="cd-text cd-title">LESS css</h3>
+                <p class="cd-text">We use <a href="http://lesscss.org/">LESS</a> to build our CSS</p>
+
+                <h3 class="cd-text cd-title">Efficiency and performance</h3>
+                <p class="cd-text">We use LESS variables and mixins as much as possible to avoid duplicating hand written CSS. We always strive to build the most robust and efficient CSS and JS components that perform well across all our supported browsers without adding too much page weight.</p>
+
+                <h3 class="cd-text cd-title">Block, Element, Modifier</h3>
+                <p class="cd-text">Our CSS follows a <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">Block, Element, Modifier (BEM)</a> syntax to create clarity and naming consistency across our patterns. BEM is arguably verbose, but it helps prevent common CSS rabbit holes such as:</p>
+                <ul class="cd-text">
+                    <li>CSS specificity</li>
+                    <li>Classname ambiguity</li>
+                    <li>global CSS changes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="page-section cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2 class="cd-title">progressive enhancement</h2>
+                <blockquote>
+                    <p>When an elevator fails, it's useless. When an escalator fails, it becomes stairs. We should be building escalators, not elevators.</p>
+                    <footer>
+                        <a href="https://jakearchibald.com/2013/progressive-enhancement-still-important/">Jake Archibald</a>
+                    </footer>
+                </blockquote>
+
+                <p>At graze we believe in the principles of progressive enhancement for reasons of performance, reliability, and accessiblity. It's a widely discussed subject but here are the key points:</p>
+
+                <ul>
+                    <li>basic content should be accessible to all web browsers</li>
+                    <li>basic functionality should be accessible to all web browsers</li>
+                    <li>sparse, semantic markup</li>
+                    <li>layout is provided by externally linked CSS</li>
+                    <li>enhanced behavior is provided by <a href="https://en.wikipedia.org/wiki/Unobtrusive_JavaScript">unobtrusive</a>, externally linked JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section page-section--alternate cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2 class="cd-title">feature detection</h2>
+
+                <blockquote>
+                    <p>
+                        Browsers are the most hostile software development environment imaginable.
+                    </p>
+                    <footer>
+                        Douglas Crockford
+                    </footer>
+                </blockquote>
+
+                <h3 class="cd-title">Cutting the Mustard</h3>
+                <p>In order to create enhanced experiences for users with modern browsers, we need to be able to tell whether we have the support for some baseline features. Our approach is taken from FT Labs Origami <a href="http://origami.ft.com/docs/developer-guide/using-modules/#core-vs-enhanced-experience">core/enhanced check</a> and implements a small piece of inline JS which switches a class in the <code>&lt;html&gt;</code> tag.</p>
+
+                <h3 class="cd-title">Javascript:</h3>
+<pre class="hljs javascript">/** * Info * --- * This file should not be pulled in to a page via an HTTP request (src=".../") * to make the check more performant and prevent layout issues if the script is * ever blocked */ (function(document, window) { var cutsTheMustard = ('querySelector'
+in document &amp;&amp; 'localStorage' in window &amp;&amp; 'addEventListener' in window); if (cutsTheMustard) { document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced'); } })(document, window);</pre>
+                <h3 class="cd-title">CSS:</h3>
+                <div class="row">
+                    <div class="col-md-6 experience-enhanced">
+                        <div class="panel">
+                            <div class="panel__body">
+                                <h4 class="cd-title">.experience-enhanced .if-js</h4>
+                                <p class="if-js"><i class="icon-ok-circled"></i> Visible <b>with</b> compatible JS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 experience-core">
+                        <div class="panel">
+                            <div class="panel__body">
+                                <h4 class="cd-title">.experience-core .if-js</h4>
+                                <p class="if-js"><i class="icon-ok-circled"></i> Visible <b>without</b> compatible JS</p>
+                                <p><small>(not visible in browsers that do not cut the mustard)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>When building enhanced JavaScript functionality, you should only apply this enhanced functionality when the <code>.experience-enhanced</code> class is present in the <code>&lt;html&gt;</code> tag. Browsers that are not present in this list do not cut the mustard and should not recieve JavaScript enhancement:</p>
+                <ul>
+                    <li>IE 9</li>
+                    <li>Firefox 3.5</li>
+                    <li>Opera 10.5</li>
+                    <li>Safari 4</li>
+                    <li>iPhone and iPad iOS 1</li>
+                    <li>Android phone and tablets 2.1</li>
+                    <li>Blackberry OS 6</li>
+                    <li>Opera Mobile 11.5</li>
+                    <li>Chrome (all)</li>
+                    <li>Mobile Firefox (all)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section cd-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2 class="cd-title">Browser support list</h2>
+                <p>The cuts the mustard test gives us a sensible baseline below which javascript enhancement is not provided. Further to this, based on analysis of our users, these are the browsers we fully support for all functionality and where we spend most of our development effort:</p>
+
+                <h3 class="cd-title">Windows 7 and Windows 10</h3>
+                <ul>
+                    <li>Firefox (latest version)</li>
+                    <li>Chrome (latest version)</li>
+                    <li>Internet Explorer 9/10/11</li>
+                    <li>Edge</li>
+                </ul>
+
+                <h3 class="cd-title">OSX</h3>
+                <ul>
+                    <li>Safari version 8 and higher</li>
+                    <li>Firefox (latest version)</li>
+                    <li>Chrome (latest version)</li>
+                </ul>
+
+                <h3 class="cd-title">iOS version 5.0 and higher</h3>
+                <ul>
+                    <li>Safari</li>
+                </ul>
+
+                <p>Included devices (earlier devices may be supported as long as they are running iOS version 5.0 or higher)</p>
+                <ul>
+                    <li>iPhone 4s and higher</li>
+                    <li>iPad 3rd generation and higher</li>
+                    <li>iPad air (all)</li>
+                    <li>iPad Mini (all)</li>
+                    <li>iPad Pro (all)</li>
+                </ul>
+                <p><a href="https://en.wikipedia.org/wiki/List_of_iOS_devices">A useful reference list</a>
+
+
+                <h3 class="cd-title">Android version 4.1 (Jelly Bean) and higher</h3>
+                <ul>
+                    <li>Stock android browser</li>
+                    <li>Chrome</li>
+                </ul>
+
+                <hr>
+
+                <p>Any browsers that fall outside of this list are considered not to be supported. The only exception to this is core business functionality which is supported in *all* browsers and includes:</p>
+                <ul>
+                    <li>Placing an order</li>
+                    <li>Providing payment details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="/">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="/basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="/components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="/examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="/js/require.js" async></script>
+
+</body>
+</html>

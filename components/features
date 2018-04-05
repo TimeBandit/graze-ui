@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | components features</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="../basics/forms">forms</a></li>
+                                                    <li><a href="../basics/images">images</a></li>
+                                                    <li><a href="../basics/links">links</a></li>
+                                                    <li><a href="../basics/lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/mixins">mixins</a></li>
+                                                    <li><a href="../basics/tables">tables</a></li>
+                                                    <li><a href="../basics/typography">typography</a></li>
+                                                    <li><a href="../basics/utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="accordion">accordion</a></li>
+                                                    <li><a href="alerts">alerts</a></li>
+                                                    <li><a href="animations">animations</a></li>
+                                                    <li><a href="breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="cookie-message">cookie message</a></li>
+                                                    <li><a href="features">features</a></li>
+                                                    <li><a href="footer">footer</a></li>
+                                                    <li><a href="grid-system">grid system</a></li>
+                                                    <li><a href="health-badges">health badges</a></li>
+                                                    <li><a href="icons">icons</a></li>
+                                                    <li><a href="navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="page-sections">page sections</a></li>
+                                                    <li><a href="pagination">pagination</a></li>
+                                                    <li><a href="panels">panels</a></li>
+                                                    <li><a href="progress">progress</a></li>
+                                                    <li><a href="ribbons">ribbons</a></li>
+                                                    <li><a href="sashes">sashes</a></li>
+                                                    <li><a href="stickers">stickers</a></li>
+                                                    <li><a href="tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h1 class="cd-text cd-title">features</h1>
+                <p class="cd-text">Feature banners and tiles can be used to showcase a product, category, or a link to related content such as blog posts. Please visit the <a href="../examples/feature-page">example feature page</a> for a demo.</p>
+                <p class="cd-text">All images should be saved from photoshop via the "save for web" option at a suggested jpg quality size of 30.</p>
+
+                <h1 class="cd-text cd-title">feature tiles</h1>
+                <p class="cd-text">Feature tiles have various options for layout and can be used in isolation or more usually as part of a feature tile grid of which you can find several examples further down this page.</p>
+
+                <h2 class="cd-text cd-title">feature tile - square</h2>
+                <p class="cd-text">Feature squares are designed to work with a square image and should be used in one of the suggested layouts below such as <a href="features#square-feature-tile-trio-with-text">square feature tile trio with text</a>.</p>
+
+                <div class="row">
+                    <ul class="grid">
+                        <li class="grid__col-xs-6 grid__col-sm-4">
+                            <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+</a>
+                        </li>
+                        <li class="grid__col-xs-6 grid__col-sm-8">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-fudge.jpg');"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>                        </li>
+                    </ul>
+                </div>
+
+                <h2 class="cd-text cd-title">feature tile - half</h2>
+                <p class="cd-text">Half feature tiles are designed to work with a 2:1 ratio rectangle image and should be used in one of the suggested layouts below such as <a href="features#half-feature-tile-trio-with-heading">half feature tile trio with heading</a></p>
+
+                <div class="row">
+                    <ul class="grid">
+                        <li class="grid__col-xs-6 grid__col-sm-4">
+                            <a href="features#0" class="feature feature--half" style="background-image:url('../images/feature/half-cashew.jpg');">
+</a>
+                        </li>
+                        <li class="grid__col-xs-6 grid__col-sm-8">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--half"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-cashew.jpg');"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>                        </li>
+                    </ul>
+                </div>
+
+                <h2 class="cd-text cd-title">feature tile - footer</h2>
+                <p class="cd-text">Add a <code>.feature__footer</code> to a feature tile.</p>
+
+                <div class="row">
+                    <ul class="grid">
+                        <li class="grid__col-xs-6 grid__col-sm-4">
+                            <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+    <p class="feature__footer">
+        salted fudge and peanut cookie
+    </p>
+</a>
+                        </li>
+                        <li class="grid__col-xs-6 grid__col-sm-8">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-fudge.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>
+        salted fudge and peanut cookie
+    <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>                        </li>
+                    </ul>
+                </div>
+
+                <h2 class="cd-text cd-title">feature tile - heading</h2>
+                <p class="cd-text">Add a <code>.feature__heading</code> to a feature tile. Image choice is important here and this style works best with simple images that lack detail or are textured.</p>
+
+                <div class="row">
+                    <ul class="grid">
+                        <li class="grid__col-xs-6 grid__col-sm-4">
+                            <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/half-doodle.jpg');">
+    <h2 class="feature__heading">
+        the running collection
+    </h2>
+</a>
+                        </li>
+                        <li class="grid__col-xs-6 grid__col-sm-8">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-doodle.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+        the running collection
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>                        </li>
+                    </ul>
+                </div>
+
+                <h2 class="cd-text cd-title">feature tile with sash</h2>
+                <p class="cd-text">You can add a <a href="sashes">sash</a> to a feature tile.</p>
+
+                <div class="row">
+                    <ul class="grid">
+                        <li class="grid__col-xs-6 grid__col-sm-4">
+                            <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+    <div class="sash sash--left">
+        <div class="sash__content">sash left</div>
+    </div>
+    <p class="feature__footer">
+        salted fudge and peanut cookie
+    </p>
+</a>
+                        </li>
+                        <li class="grid__col-xs-6 grid__col-sm-8">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-fudge.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sash sash--left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sash__content"</span>&gt;</span>sash left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>
+        salted fudge and peanut cookie
+    <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>                        </li>
+                    </ul>
+                </div>
+
+                <h2 class="cd-text cd-title">feature tile with stickers</h2>
+                <p class="cd-text">You can add a <a href="stickers">sticker</a> to a feature tile.</p>
+
+                <div class="row">
+                    <ul class="grid">
+                        <li class="grid__col-xs-6 grid__col-sm-4">
+                            <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-dippers.jpg');">
+    <div class="sticker sticker--outside-left">
+        <div class="sticker__content">
+            <span class="sticker__text sticker__text--lg">new</span>
+            <span class="sticker__text">recipe</span>
+        </div>
+    </div>
+    <p class="feature__footer">
+        salted fudge and peanut cookie
+    </p>
+</a>
+                        </li>
+                        <li class="grid__col-xs-6 grid__col-sm-8">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-dippers.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sticker sticker--outside-left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sticker__content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sticker__text sticker__text--lg"</span>&gt;</span>new<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sticker__text"</span>&gt;</span>recipe<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>
+        salted fudge and peanut cookie
+    <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h1 class="cd-text cd-title">feature tile layouts</h1>
+                <p class="cd-text">Feature tiles have various suggested layouts as shown here.</p>
+                <h2 class="cd-title">square feature tile trio with text</h2>
+                <h3 class="cd-title">image size: 450px x 450px</h3>
+            </div>
+        </div>
+        <ul class="grid">
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-ppnuts.jpg');"></a>
+        <p>Our punchy protein nuts are the tastiest way to enjoy more protein.</p>
+        <div class="grid__cell-footer">
+            <a href="features#0">punchy protein nuts <span class="fa fa-angle-right"></span></a>
+        </div>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-blackboard.jpg');">
+        </a>
+        <p>Take a look at our taste expert Ellie’s favourite snacks.</p>
+        <div class="grid__cell-footer">
+            <a href="features#0">view snacks <span class="fa fa-angle-right"></span></a>
+        </div>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+        </a>
+        <p>We have over 50 new recipes including our salted fudge and peanut cookie.</p>
+        <div class="grid__cell-footer">
+            <a href="features#0">view all new recipes <span class="fa fa-angle-right"></span></a>
+        </div>
+    </li>
+</ul>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-ppnuts.jpg');"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Our punchy protein nuts are the tastiest way to enjoy more protein.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__cell-footer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span>&gt;</span>punchy protein nuts <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-angle-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-blackboard.jpg');"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Take a look at our taste expert Ellie’s favourite snacks.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__cell-footer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span>&gt;</span>view snacks <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-angle-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-fudge.jpg');"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>We have over 50 new recipes including our salted fudge and peanut cookie.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__cell-footer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span>&gt;</span>view all new recipes <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-angle-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h2 class="cd-title">square feature tile trio with footer</h2>
+                <h3 class="cd-title">image size: 450px x 450px</h3>
+            </div>
+        </div>
+        <ul class="grid">
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-honeycomb.jpg');">
+            <p class="feature__footer">honeycomb flapjack</p>
+        </a>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-popsicle.jpg');">
+            <p class="feature__footer">strawberries &amp; cream popsicles</p>
+        </a>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+
+            <p class="feature__footer">salted fudge and peanut cookie</p>
+        </a>
+    </li>
+</ul>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-honeycomb.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>honeycomb flapjack<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-popsicle.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>strawberries &amp;amp; cream popsicles<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-fudge.jpg');"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>salted fudge and peanut cookie<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h2 class="cd-title">square feature tile quartet with footer</h2>
+                <h3 class="cd-title">image size: 450px x 450px</h3>
+            </div>
+        </div>
+        <ul class="grid">
+    <li class="grid__col-xs-6 grid__col-sm-3">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-honeycomb.jpg');">
+            <p class="feature__footer">honeycomb flapjack</p>
+        </a>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-3">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-popsicle.jpg');">
+            <p class="feature__footer">strawberries &amp; cream popsicles</p>
+        </a>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-3">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+            <p class="feature__footer">salted fudge and peanut cookie</p>
+        </a>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-3">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-dippers.jpg');">
+            <p class="feature__footer">dippers colection</p>
+        </a>
+    </li>
+</ul>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-honeycomb.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>honeycomb flapjack<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-popsicle.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>strawberries &amp;amp; cream popsicles<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-fudge.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>salted fudge and peanut cookie<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-6 grid__col-sm-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-dippers.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__footer"</span>&gt;</span>dippers colection<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h2 class="cd-title">half feature tile trio with heading</h2>
+                <h3 class="cd-title">image size: 450px x 225px</h3>
+            </div>
+        </div>
+        <ul class="grid">
+    <li class="grid__col-xs-4">
+        <a href="features#0" class="feature feature--half" style="background-image:url('../images/feature/half-honey.jpg');">
+            <h2 class="feature__heading">
+                homemade honeycomb
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-xs-4">
+        <a href="features#0" class="feature feature--half" style="background-image:url('../images/feature/half-cashew.jpg');">
+            <h2 class="feature__heading">
+                benefits of cashews
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-xs-4">
+        <a href="features#0" class="feature feature--half" style="background-image:url('../images/feature/half-smoothie.jpg');">
+            <h2 class="feature__heading">
+                smoothie bowl recipes
+            </h2>
+        </a>
+    </li>
+</ul>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--half"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-honey.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                homemade honeycomb
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--half"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-cashew.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                benefits of cashews
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-xs-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--half"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-smoothie.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                smoothie bowl recipes
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h2 class="cd-title">2:1 tiles with heading</h2>
+                <h3 class="cd-title">image size: 750px x 375px and 450px x 450px</h3>
+            </div>
+        </div>
+        <ul class="grid">
+    <li class="grid__col-12 grid__col-xs-8">
+        <a href="features#0" class="feature feature--half" style="background-image:url('../images/feature/half-running.jpg');">
+            <h2 class="feature__heading">
+                the running collection: fuel your feet
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-12 grid__col-xs-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-dippers.jpg');">
+            <h2 class="feature__heading">
+                dips &amp; dippers collection
+            </h2>
+        </a>
+    </li>
+</ul>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-12 grid__col-xs-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--half"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-running.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                the running collection: fuel your feet
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-12 grid__col-xs-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-dippers.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                dips &amp;amp; dippers collection
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>            </div>
+        </div>
+
+        <ul class="grid">
+    <li class="grid__col-12 grid__col-xs-4">
+        <a href="features#0" class="feature feature--square" style="background-image:url('../images/feature/square-dippers.jpg');">
+            <h2 class="feature__heading">
+                dips &amp; dippers collection
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-12 grid__col-xs-8">
+        <a href="features#0" class="feature feature--half" style="background-image:url('../images/feature/half-running.jpg');">
+            <h2 class="feature__heading">
+                the running collection: fuel your feet
+            </h2>
+        </a>
+    </li>
+</ul>
+        <div class="grid">
+            <div class="grid__col-xs-12">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-12 grid__col-xs-4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--square"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/square-dippers.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                dips &amp;amp; dippers collection
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-12 grid__col-xs-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature feature--half"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/feature/half-running.jpg');"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature__heading"</span>&gt;</span>
+                the running collection: fuel your feet
+            <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__col-xs-12">
+                <h2 class="cd-title">Feature banner</h2>
+                <h3 class="cd-title">image size: 1200px x 300px</h3>
+                <p class="cd-text">Feature banners are designed to work with an image that is 1200px wide and 300px high. For art direction you should consider two thirds of the image as the focus as demonstrated below. The content can be aligned left or right.</p>
+
+                <img src="../images/banners/banner-template.jpg" class="img-responsive">
+                <br>
+                <img src="../images/banners/banner-template-right.jpg" class="img-responsive">
+                <br>
+
+                <h3 class="cd-title">with fade</h3>
+                <p class="cd-text">Faded banner content will work for the vast majority of images and should be considered the default.</p>
+                <div class="feature-banner" style="background-image:url('../images/banners/banner-berry.jpg');">
+    <div class="feature-banner__content feature-banner__content--fade">
+        <h2>good just got exciting</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+        <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-berry.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner__content feature-banner__content--fade"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <div class="feature-banner feature-banner--right" style="background-image:url('../images/banners/banner-berry-right.jpg');">
+    <div class="feature-banner__content feature-banner__content--fade feature-banner__content--right">
+        <h2>good just got exciting</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+        <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner feature-banner--right"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-berry-right.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner__content feature-banner__content--fade feature-banner__content--right"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">with no fade</h3>
+                <p class="cd-text">Some images are not suitable for use with the fade but there is an option without fade.</p>
+                <div class="feature-banner" style="background-image:url('../images/banners/banner-cashews.jpg');">
+    <div class="feature-banner__content">
+        <h2>good just got exciting</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+        <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-cashews.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner__content"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <div class="feature-banner feature-banner--right" style="background-image:url('../images/banners/banner-cashews-right.jpg');">
+    <div class="feature-banner__content feature-banner__content--right">
+        <h2>good just got exciting</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+        <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner feature-banner--right"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-cashews-right.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner__content feature-banner__content--right"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">with a dark background</h3>
+                <p class="cd-text">Images with a dark background colour are suitable for use with white text with a shadow.</p>
+                <div class="feature-banner" style="background-image:url('../images/banners/banner-yoga.jpg');">
+    <div class="feature-banner__content feature-banner__content--dark">
+        <h2>good just got exciting</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+        <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-yoga.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner__content feature-banner__content--dark"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <div class="feature-banner feature-banner--right" style="background-image:url('../images/banners/banner-yoga-right.jpg');">
+    <div class="feature-banner__content feature-banner__content--dark feature-banner__content--right">
+        <h2>good just got exciting</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+        <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner feature-banner--right"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-yoga-right.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-banner__content feature-banner__content--dark feature-banner__content--right"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <p class="cd-text">Below 992 pixel viewport width all banners will respond by collapsing the text content below the banner image. Resize your browser to see how it works (if you need to).</p>
+
+                <h2 class="cd-title">Feature strip</h2>
+                <h3 class="cd-title">image size: 1200px x 300px</h3>
+                <p class="cd-text">For art direction you should consider the central section of the image as the focus. At different viewport sizes more of the surrounding photo will be visible but the center section is always visible.</p>
+                <img src="../images/banners/banner-template-strip.jpg" class="img-responsive">
+                <br>
+
+                <h3 class="cd-title">as a link</h3>
+                <a href="features#0" class="feature-strip" style="background-image:url('../images/banners/banner-berry.jpg');">
+    <div class="feature-strip__content feature-strip__content--fade">
+        <p>Visit the graze blog for thousands of exciting recipes</p>
+    </div>
+</a>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-strip"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-berry.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-strip__content feature-strip__content--fade"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Visit the graze blog for thousands of exciting recipes<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                <h3 class="cd-title">With a call to action</h3>
+                <div class="feature-strip" style="background-image:url('../images/banners/banner-halloween.jpg');">
+    <div class="feature-strip__content feature-strip__content--fade">
+        <p>Vegan, gluten-free, and no refined sugars - it's our chocolate pumpkin brownie recipe!</p>
+        <button class="button">read more</button>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-strip"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-halloween.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-strip__content feature-strip__content--fade"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Vegan, gluten-free, and no refined sugars - it's our chocolate pumpkin brownie recipe!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>read more<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">With a call to action and a dark background</h3>
+                <div class="feature-strip" style="background-image:url('../images/banners/banner-yoga.jpg');">
+    <div class="feature-strip__content feature-strip__content--dark">
+        <p>The life changing properties of yoga</p>
+        <button class="button">learn more</button>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-strip"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-yoga.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-strip__content feature-strip__content--dark"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>The life changing properties of yoga<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>learn more<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h2 class="cd-title">Feature full width banner</h2>
+                <h3 class="cd-title">image size: 1600px x 400px</h3>
+                <p class="cd-text">Full width feature banners are designed to work with an image that is 1600px wide and 400px high. For art direction you should consider half of the image as the focus as demonstrated below. The red section will always be visible on all viewport sizes while the green section is sometimes visible depending on viewport size.</p>
+                <img src="../images/banners/banner-template-full-right.jpg" class="img-responsive">
+                <br>
+                <img src="../images/banners/banner-template-full-left.jpg" class="img-responsive">
+                <br>
+
+                <h3 class="cd-title">With a content panel</h3>
+                <div class="feature-full" style="background-image:url('../images/banners/banner-berry-full-right.jpg');">
+    <div class="feature-full__container">
+        <div class="feature-full__content">
+            <h2>good just got exciting</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+            <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+        </div>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-berry-full-right.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">With a content panel aligned right</h3>
+                <div class="feature-full feature-full--right" style="background-image:url('../images/banners/banner-berry-full-left.jpg');">
+    <div class="feature-full__container">
+        <div class="feature-full__content feature-full__content--right">
+            <h2>good just got exciting</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus ligula, dictum at augue feugiat, facilisis aliquam eros.</p>
+            <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+        </div>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full feature-full--right"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-berry-full-left.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__content feature-full__content--right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus ligula, dictum at augue feugiat, facilisis aliquam eros.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">With a dark background</h3>
+                <div class="feature-full" style="background-image:url('../images/banners/banner-full-left-xmaspud.jpg');">
+    <div class="feature-full__container">
+        <div class="feature-full__content feature-full__content--dark">
+            <h2>good just got exciting</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+            <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+        </div>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-full-left-xmaspud.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__content feature-full__content--dark"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">With a dark background aligned right</h3>
+                <div class="feature-full feature-full--right" style="background-image:url('../images/banners/banner-full-right-xmaspud.jpg');">
+    <div class="feature-full__container">
+        <div class="feature-full__content feature-full__content--dark feature-full__content--right">
+            <h2>good just got exciting</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+            <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+        </div>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full feature-full--right"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-full-right-xmaspud.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__content feature-full__content--dark feature-full__content--right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h3 class="cd-title">With a content panel aligned center</h3>
+                <h3 class="cd-title">image size: 1600px x 800px</h3>
+                <p class="cd-text">There is a unique image size for full width banners. For art direction you should be aware that the red section will always be visible on all viewport sizes while the entire image is visible at smaller viewport sizes.</p>
+                <img src="../images/banners/banner-template-full-center.jpg" class="img-responsive">
+                <br>
+
+                <div class="feature-full feature-full--center" style="background-image:url('../images/banners/banner-full-center.jpg');">
+    <div class="feature-full__container">
+        <div class="feature-full__content feature-full__content--center">
+            <h1>good just got exciting</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus ligula, dictum at augue feugiat, facilisis aliquam eros.</p>
+            <a href="features#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+        </div>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full feature-full--center"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-image:url('/images/banners/banner-full-center.jpg');"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full__content feature-full__content--center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>good just got exciting<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus ligula, dictum at augue feugiat, facilisis aliquam eros.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--lg button--block-xs"</span>&gt;</span>get started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                <h2 class="cd-title">Feature images</h2>
+                <h3 class="cd-title">image size: 1200px x (100 - 500px)</h3>
+                <h3 class="cd-title">image only</h3>
+                <p class="cd-text">Featured images can be used as headers for pages and should always include an alt property.</p>
+                <img class="img-bleed" src="../images/feature/header-image.jpg" alt="give the gift of graze this christmas">
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-bleed"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/images/feature/header-image.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"give the gift of graze this christmas"</span>&gt;</span></pre>
+                <h3 class="cd-title">image as a link</h3>
+                <a href="features#0" class="link-img">
+    <img class="img-bleed" src="../images/feature/header-image.jpg" alt="give the gift of graze this christmas">
+</a>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"link-img"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-bleed"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/images/feature/header-image.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"give the gift of graze this christmas"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                <h3 class="cd-title">Full width image only</h3>
+                <h3 class="cd-title">image size: 1600px x (100 - 500px)</h3>
+                <p class="cd-text">Full width feature images should always include an alt property.</p>
+                <div class="feature-full">
+    <img class="img-bleed" src="../images/feature/header-image-full.jpg" alt="give the gift of graze this christmas">
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"feature-full"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-bleed"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/images/feature/header-image-full.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"give the gift of graze this christmas"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

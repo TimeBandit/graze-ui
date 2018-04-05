@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | components page sections</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="../basics/forms">forms</a></li>
+                                                    <li><a href="../basics/images">images</a></li>
+                                                    <li><a href="../basics/links">links</a></li>
+                                                    <li><a href="../basics/lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/mixins">mixins</a></li>
+                                                    <li><a href="../basics/tables">tables</a></li>
+                                                    <li><a href="../basics/typography">typography</a></li>
+                                                    <li><a href="../basics/utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="accordion">accordion</a></li>
+                                                    <li><a href="alerts">alerts</a></li>
+                                                    <li><a href="animations">animations</a></li>
+                                                    <li><a href="breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="cookie-message">cookie message</a></li>
+                                                    <li><a href="features">features</a></li>
+                                                    <li><a href="footer">footer</a></li>
+                                                    <li><a href="grid-system">grid system</a></li>
+                                                    <li><a href="health-badges">health badges</a></li>
+                                                    <li><a href="icons">icons</a></li>
+                                                    <li><a href="navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="page-sections">page sections</a></li>
+                                                    <li><a href="pagination">pagination</a></li>
+                                                    <li><a href="panels">panels</a></li>
+                                                    <li><a href="progress">progress</a></li>
+                                                    <li><a href="ribbons">ribbons</a></li>
+                                                    <li><a href="sashes">sashes</a></li>
+                                                    <li><a href="stickers">stickers</a></li>
+                                                    <li><a href="tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="cd-text cd-title">page sections</h1>
+            <p class="cd-text">Page sections help break up pages and give content some much needed breathing space.</p>
+
+            <div class="panel">
+                <div class="panel__body">
+                    <h4 class="cd-text cd-title"><i>heads up!</i></h4>
+                    <p class="cd-text">Due to our styleguide layout, all examples are contained in a content area.  Page sections should generally be used to cover the whole page width for maximum effect.</p>
+                </div>
+            </div>
+
+            <h3 class="cd-text cd-title">example</h3>
+            <div class="page-section page-section--alternate">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 page-section__content">
+                <h2>hello Cat Stevens</h2>
+                <p class="lead">Check out our latest snacks!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <h3 class="cd-text cd-title">code</h3>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page-section page-section--alternate"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12 page-section__content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>hello Cat Stevens<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>Check out our latest snacks!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">types</h2>
+            <h3 class="cd-text cd-title">colour modifiers</h3>
+
+            <p class="cd-text">Page sections have a white background by default but you can use these classes to modify that.</p>
+
+            <h3 class="cd-text cd-title">transparent</h3>
+            <p class="cd-text"> A transparent page section is useful for allowing the background of the page to be visible.</p>
+            <div class="page-section page-section--transparent text-center">
+                <p>Modifer: <code>.page-section--transparent</code></p>
+            </div>
+            <br>
+
+            <h3 class="cd-text cd-title">brand</h3>
+            <p class="cd-text">Brand colour sections should only be used to frame the page at top and bottom and never within a page.</p>
+            <div class="page-section page-section--brand text-center">
+                <p>Modifer: <code>.page-section--brand</code></p>
+                <a href="page-sections#" class="link-inverse">.link-inverse</a>
+            </div>
+            <br>
+
+            <h3 class="cd-text cd-title">alternate</h3>
+            <p class="cd-text">Alternate page sections are perfect for breaking up longer sections of a page by alternating between white sections.</p>
+            <div class="page-section page-section--alternate text-center">
+                <p>Modifer: <code>.page-section--alternate</code></p>
+            </div>
+            <br>
+
+            <h3 class="cd-text cd-title">hint</h3>
+            <p class="cd-text">The grey colour used in "hint" sections will only be visible on high quality screens and devices and therefore should only be used as a progressive enhancement on those devices. When it's important for page sections to be visible, hint is not appropriate.</p>
+            <div class="page-section page-section--hint text-center">
+                <p>Modifer: <code>.page-section--hint</code></p>
+            </div>
+            <br>
+
+            <h3 class="cd-text cd-title">background images</h3>
+
+            <div class="page-section page-section--image text-center" style="background-image: url('https://unsplash.imgix.net/photo-1428908684367-2fe456a630bb?fit=crop&fm=jpg&h=700&q=75&w=1050')">
+                <p>Modifer: <code>.page-section--image</code></p>
+            </div>
+            <br>
+
+            <h3 class="cd-text cd-title">inverse</h3>
+            <div class="page-section page-section--inverse page-section--image text-center" style="background-image: url('https://ununsplash.imgix.net/photo-1428699190791-2c4f8b144d06?fit=crop&fm=jpg&h=1575&q=75&w=1050')">
+                <p>Modifer: <code>.page-section--inverse .page-section--image</code></p>
+                <a href="page-sections#" class="link-inverse">.link-inverse</a>
+            </div>
+
+            <h3 class="cd-text cd-title">size modifiers</h3>
+            <p class="cd-text">Default padding size is <b>3em</b>.</p>
+
+            <div class="page-section page-section--alternate page-section--bleed text-center">
+                <p>Bleed: <b>0</b> <code>.page-section--bleed</code></p>
+            </div>
+            <br>
+
+            <div class="page-section page-section--alternate page-section--xs text-center">
+                <p>Extra Small: <b>.75em</b> <code>.page-section--xs</code></p>
+            </div>
+            <br>
+
+            <div class="page-section page-section--alternate page-section--sm text-center">
+                <p>Small: <b>1.5em</b> <code>.page-section--sm</code></p>
+            </div>
+            <br>
+
+            <div class="page-section page-section--alternate page-section--lg text-center">
+                <p>Large: <b>6em</b> <code>.page-section--lg</code></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

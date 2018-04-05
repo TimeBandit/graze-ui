@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | examples off screen menu</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body class="pistachio-blank">
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<div class="off-screen-header">
+    <div class="page-section page-section--xs">
+        <div class="container">
+            <nav class="grid grid--bleed grid--align-center">
+                <div class="off-screen-trigger-spacer grid__col-auto">
+                    <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                        <i class="fa fa-reorder fa-2x"></i>
+                        <span class="sr-only">toggle menu</span>
+                    </label>
+                </div>
+                <a href="off-screen-menu#0" class="grid__col-auto off-screen-header__logo link-img">
+                    <span class="sr-only">graze home page</span>
+                </a>
+                <div class="grid__col-auto grid--direction-row grid--justify-end grid--order-2-sm off-screen-header__icons" data-p-module="offScreenSearch">
+    <a class="nav__item hidden-lg hidden-md hidden-sm off-screen-header__icon--search" href="off-screen-menu#0">
+        <i class="fa fa-search"></i><span class="sr-only">find</span>
+    </a>
+    <a class="nav__item link-nowrap" href="off-screen-menu#0">
+        <i class="fa fa-shopping-cart off-screen-header__icon"></i> 0<span class="hidden-xxs hidden-xs"> items: £0.00</span>
+    </a>
+    <a class="nav__item" href="off-screen-menu#0">
+        <i class="fa fa-user off-screen-header__icon"></i><span class="hidden-xxs hidden-xs"> login</span>
+    </a>
+</div>
+<div class="grid__col-sm-5 grid__col--bleed grid--order-1 grid--order-1-sm off-screen-header__search-overlay">
+    <nav class="off-screen-header__search">
+        <form method="get" action="http://pistachio.graze.com/search.html" class="off-screen-header__form">
+            <div class="form-group form-group--has-feedback margin-reset">
+                <input type="text" class="form-control" id="search" name="search" placeholder="search..." required="">
+                <button class="button form-control__button" type="submit"><i class="fa fa-search"></i><span class="sr-only">find</span></button>
+            </div>
+        </form>
+        <a class="nav__item off-screen-close-btn hidden-lg hidden-md hidden-sm" href="off-screen-menu#0">
+            <i class="fa fa-close off-screen-header__icon off-screen-header__icon--search"></i><span class="hidden-xxs hidden-xs">close search</span>
+        </a>
+    </nav>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="off-screen-menu">
+    <div class="page-section page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <nav role="navigation">
+    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+        <li>
+            <a class="nav__item nav__item--active" href="off-screen-menu#0">subscribe</a>
+        </li>
+        <li class="nav__dropdown">
+            <a id="blog" class="nav__dropdown__item" href="off-screen-menu#0">my graze</a>
+            <ul class="nav__dropdown__menu" aria-labelledby="blog">
+                <li><a href="off-screen-menu#0">my graze home</a></li>
+                <li><a href="off-screen-menu#0">in my box</a></li>
+                <li><a href="off-screen-menu#0">my favourites</a></li>
+                <li><a href="off-screen-menu#0">my rewards<span class="reward-points" data-nav-rewards-points="">1</span></a></li>
+            </ul>
+        </li>
+        <li class="nav__dropdown nav__dropdown--full">
+            <a id="category1" class="nav__dropdown__item nav__dropdown__item--active" href="off-screen-menu#0">shop</a>
+            <ul class="nav__dropdown__menu">
+                <li class="col-sm-6">
+                    <ul class="nav__dropdown__menu__sub">
+                        <li class="nav__dropdown__menu__sub__header nav__dropdown__item--active">
+                            snack categories
+                        </li>
+                        <li class="col-sm-6">
+                            <ul class="nav__dropdown__menu__sub__content">
+                                <li><a href="off-screen-menu#0">all snacks</a></li>
+                                <li><a href="off-screen-menu#0" class="nav__dropdown__item--active">new</a></li>
+                                <li><a href="off-screen-menu#0">best sellers</a></li>
+                                <li><a href="off-screen-menu#0">sweet</a></li>
+                                <li><a href="off-screen-menu#0">savoury</a></li>
+                                <li><a href="off-screen-menu#0">chocolate</a></li>
+                                <li><a href="off-screen-menu#0">nuts &amp; seeds</a></li>
+                                <li><a href="off-screen-menu#0">fruit</a></li>
+                                <li><a href="off-screen-menu#0">bakery</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-sm-6">
+                            <ul class="nav__dropdown__menu__sub__content">
+                                <li><a href="off-screen-menu#0">popcorn</a></li>
+                                <li><a href="off-screen-menu#0">tea</a></li>
+                                <li><a href="off-screen-menu#0">flapjacks</a></li>
+                                <li><a href="off-screen-menu#0">crisp alternatives</a></li>
+                                <li><a href="off-screen-menu#0">dips &amp; dippers</a></li>
+                                <li><a href="off-screen-menu#0">protein bites &amp; toppers</a></li>
+                                <li><a href="off-screen-menu#0">jerky</a></li>
+                                <li><a href="off-screen-menu#0">superfoods</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-sm-3">
+                    <ul class="nav__dropdown__menu__sub">
+                        <li class="nav__dropdown__menu__sub__header">
+                            healthy habits
+                        </li>
+                        <li>
+                            <ul class="nav__dropdown__menu__sub__content">
+                                <li><a href="off-screen-menu#0">150 calories or less</a></li>
+                                <li><a href="off-screen-menu#0">source of fibre</a></li>
+                                <li><a href="off-screen-menu#0">source of protein</a></li>
+                                <li><a href="off-screen-menu#0">vits &amp; mins</a></li>
+                                <li><a href="off-screen-menu#0">sugar count</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-sm-3">
+                    <ul class="nav__dropdown__menu__sub">
+                        <li class="nav__dropdown__menu__sub__header">
+                            occasions
+                        </li>
+                        <li>
+                            <ul class="nav__dropdown__menu__sub__content">
+                                <li><a href="off-screen-menu#0">better baking</a></li>
+                                <li><a href="off-screen-menu#0">sweet treats</a></li>
+                                <li><a href="off-screen-menu#0">lunch boxes</a></li>
+                                <li><a href="off-screen-menu#0">afternoon snacks</a></li>
+                                <li><a href="off-screen-menu#0">after dinner treats</a></li>
+                                <li><a href="off-screen-menu#0">with a cuppa</a></li>
+                                <li><a href="off-screen-menu#0">watching a movie</a></li>
+                                <li><a href="off-screen-menu#0">savoury cravings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-sm-12 nav__dropdown__menu__footer">
+                    <a href="off-screen-menu#0">
+                        view all snacks
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__dropdown">
+            <a id="blog" class="nav__dropdown__item" href="off-screen-menu#0">blog</a>
+            <ul class="nav__dropdown__menu" aria-labelledby="blog">
+                <li><a href="off-screen-menu#0">all posts</a></li>
+                <li><a href="off-screen-menu#0">recipes</a></li>
+                <li><a href="off-screen-menu#0">health</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="nav__item" href="off-screen-menu#0">about</a>
+        </li>
+        <li>
+            <a class="nav__item" href="off-screen-menu#0">my account</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="nav__get-started">
+    <button class="button button--primary button--continue">get started</button>
+</div>
+
+<nav role="navigation" class="hidden-sm hidden-md hidden-lg">
+    <ul class="nav nav--dropdown">
+        <li>
+            <a href="off-screen-menu#" class="nav__item nav__item--account">
+                Already a grazer? <span>login</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-wrapper">
+    <div class="page-section--hint">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="cd-text cd-title">Off screen menu</h1>
+                    <p class="cd-text">Resize your browser to below 768px viewport width to see the off screen menu in action. full documentation is available on <a href="../components/off-screen-menu">the off-screen menu page</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://www.facebook.com/grazeuk/" title="like us on Facebook">
+                <span class="fa fa-facebook-square fa-2x"></span>
+                <span class="sr-only">like us on Facebook</span>
+            </a></li>
+            <li><a class="link-meta" href="https://twitter.com/grazedotcom" title="follow us on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow us on Twitter</span>
+            </a></li>
+            <li><a class="link-meta" href="https://www.instagram.com/grazedotcom/" title="follow us on Instagram">
+                <span class="fa fa-instagram fa-2x"></span>
+                <span class="sr-only">follow us on Instagram</span>
+            </a></li>
+            <li><a class="link-meta" href="http://blog.graze.com/" title="graze tumblr blog">
+                <span class="fa fa-tumblr-square fa-2x"></span>
+                <span class="sr-only">follow us on Tumblr</span>
+            </a></li>
+            <li><a class="link-meta" href="https://www.pinterest.com/grazedotcom/" title="graze Pinterest">
+                <span class="fa fa-pinterest-square fa-2x"></span>
+                <span class="sr-only">follow us on Pinterest</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="https://www.facebook.com/grazeuk/" title="like us on Facebook">
+                about us
+            </a></li>
+            <li><a class="link-meta" href="https://twitter.com/grazedotcom" title="follow us on Twitter">
+                health
+            </a></li>
+            <li><a class="link-meta" href="https://www.instagram.com/grazedotcom/" title="follow us on Instagram">
+                jobs
+            </a></li>
+            <li><a class="link-meta" href="https://www.linkedin.com/company/769920" title="follow us on LinkedIn">
+                office snacks
+            </a></li>
+            <li><a class="link-meta" href="http://blog.graze.com/" title="graze tumblr blog">
+                in stores
+            </a></li>
+            <li><a class="link-meta" href="http://tech.graze.com" title="graze tech blog">
+                help
+            </a></li>
+            <li><a class="link-meta" href="http://tech.graze.com" title="graze tech blog">
+                get in touch
+            </a></li>
+        </ul>
+        <ul class="page-footer__secondary">
+            <li class="nav--dropdown nav--dropdown-inline" data-p-module="dropDown">
+                <div class="nav__dropdown button--dropdown">
+                    <img src="../images/flag-uk.svg" height="15px"> <small class="link-meta">UK</small>
+                    <div class="nav__dropdown__menu nav__dropdown__menu--wide">
+                        <a href="off-screen-menu#0" class="link-nowrap">
+                            <small><img src="../images/flag-us.svg" height="15px"> USA</small>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="link-meta" href="https://www.facebook.com/grazeuk/" title="like us on Facebook">
+                <small>terms</small>
+            </a></li>
+            <li><a class="link-meta" href="https://twitter.com/grazedotcom" title="follow us on Twitter">
+                <small>privacy</small>
+            </a></li>
+            <li class="meta pull-right-xs">
+                <small>© 2016 nature delivered ltd</small>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+
+
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

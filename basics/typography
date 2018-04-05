@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | basics typography</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="forms">forms</a></li>
+                                                    <li><a href="images">images</a></li>
+                                                    <li><a href="links">links</a></li>
+                                                    <li><a href="lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="mixins">mixins</a></li>
+                                                    <li><a href="tables">tables</a></li>
+                                                    <li><a href="typography">typography</a></li>
+                                                    <li><a href="utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/accordion">accordion</a></li>
+                                                    <li><a href="../components/alerts">alerts</a></li>
+                                                    <li><a href="../components/animations">animations</a></li>
+                                                    <li><a href="../components/breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="../components/cookie-message">cookie message</a></li>
+                                                    <li><a href="../components/features">features</a></li>
+                                                    <li><a href="../components/footer">footer</a></li>
+                                                    <li><a href="../components/grid-system">grid system</a></li>
+                                                    <li><a href="../components/health-badges">health badges</a></li>
+                                                    <li><a href="../components/icons">icons</a></li>
+                                                    <li><a href="../components/navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="../components/page-sections">page sections</a></li>
+                                                    <li><a href="../components/pagination">pagination</a></li>
+                                                    <li><a href="../components/panels">panels</a></li>
+                                                    <li><a href="../components/progress">progress</a></li>
+                                                    <li><a href="../components/ribbons">ribbons</a></li>
+                                                    <li><a href="../components/sashes">sashes</a></li>
+                                                    <li><a href="../components/stickers">stickers</a></li>
+                                                    <li><a href="../components/tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="cd-text cd-title">typography</h1>
+            <p class="cd-text ">We use three fonts; a heading font, body font and cursive font. Our typographic elements have set margins to ensure consistency. Most modules such as <a href="http://pistachio.graze.com/basics/page-sections">page section</a> will remove top margin from the first child element and bottom margin from the last child element to ensure consistent spacing.</p>
+
+            <h2 class="cd-text cd-title">headings</h2>
+            <p class="cd-text ">Headings should always be lowercase and this is enforced via CSS. Headings can have commas, but not full stops. An exception is made when a person's name or brand is mentioned. Enforced lowercase can be removed by using the class <code>.name</code>.</p>
+
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <h1>page heading</h1>
+                </div>
+                <div class="col-md-4 col-sm-2 hidden-xs">
+                    <h1 class="hidden-xs hidden-xxs">28.8px (1.8rem)</h1>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs hidden-xxs">
+                    <h1 class="">graze Pro</h1>
+                </div>
+                <div class="col-xs-6 col-sm-2 visible-xs-block text-right-xs visible-xxs-block">
+                    <p>25.2px (1.575rem) / graze Pro</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h1>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></pre>                    </h1>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <h2>subpage heading</h2>
+                </div>
+                <div class="col-md-4 col-sm-2 hidden-xs">
+                    <h2 class="hidden-xs hidden-xxs">24px (1.5rem)</h2>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs hidden-xxs">
+                    <h2>graze Pro</h2>
+                </div>
+                <div class="col-xs-6 col-sm-2 visible-xs-block text-right-xs visible-xxs-block">
+                    <p>21px (1.3125rem) / graze Pro</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h2>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span></pre>                    </h2>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <h3>section heading</h3>
+                </div>
+                <div class="col-md-4 col-sm-2 hidden-xs">
+                    <h3 class="hidden-xs hidden-xxs">22.4px (1.4rem)</h3>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs hidden-xxs">
+                    <h3>Helvetica Neue</h3>
+                </div>
+                <div class="col-xs-6 col-sm-2 visible-xs-block text-right-xs visible-xxs-block">
+                    <p>19.6px (1.225rem) / Helvetica Neue</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h3>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span></pre>                    </h3>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <h4>sub section heading</h4>
+                </div>
+                <div class="col-md-4 col-sm-2 hidden-xs">
+                    <h4 class="hidden-xs hidden-xxs">19.2px (1.2rem)</h4>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs hidden-xxs">
+                    <h4>Helvetica Neue</h4>
+                </div>
+                <div class="col-xs-6 col-sm-2 visible-xs-block text-right-xs visible-xxs-block">
+                    <p>16.8px (1.05rem) / Helvetica Neue</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h4>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span></pre>                    </h4>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <h5>sub sub section heading</h5>
+                </div>
+                <div class="col-md-4 col-sm-2 hidden-xs">
+                    <h5 class="hidden-xs hidden-xxs">17.6px (1.1rem)</h5>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs hidden-xxs">
+                    <h5>Helvetica Neue</h5>
+                </div>
+                <div class="col-xs-6 col-sm-2 visible-xs-block text-right-xs visible-xxs-block">
+                    <p>15.4px (0.9625rem) / Helvetica Neue</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h5>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span></pre>                    </h5>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <h6>sub sub section heading</h6>
+                </div>
+                <div class="col-md-4 col-sm-2 hidden-xs">
+                    <h6 class="hidden-xs hidden-xxs">16px (1rem)</h6>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs hidden-xxs">
+                    <h6>Helvetica Neue</h6>
+                </div>
+                <div class="col-xs-6 col-sm-2 visible-xs-block text-right-xs visible-xxs-block">
+                    <p>14px (0.875rem) / Helvetica Neue</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h6>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>                    </h6>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="cd-text cd-title">heading with meta text</h2>
+                    <p class="cd-text">Sometimes you want supplementary or "meta" text next to a heading. The <code>.heading-with-meta</code> class will assist with this.</p>
+                    <h1 class="heading-with-meta">your basket</h1><p class="meta">(12 items)</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading-with-meta"</span>&gt;</span>your basket<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"meta"</span>&gt;</span>(12 items)<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">paragraphs and additional styles</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="lead">Lead paragraph, often used for an opening summary.</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <p><strong>Strong for bold copy or form labels.</strong></p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <p>This is our standard paragraph and base font size.</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <p class="muted">Muted or less important text.</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"muted"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <p class="meta"><span class="fa fa-question-circle"></span> Additional guidance information relating to nearby content.</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"meta"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-question-circle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <blockquote>
+                        <p>
+                            Blockquote with optional footer.
+                        </p>
+                        <footer>
+                            Lee Jordan
+                        </footer>
+                    </blockquote>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+        Blockquote with optional footer.
+    <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+        Lee Jordan
+    <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></pre>
+                    <blockquote class="lead">
+                        <p>
+                            Lead blockquote with optional footer.
+                        </p>
+                        <footer>
+                            Lee Jordan
+                        </footer>
+                    </blockquote>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+        Lead blockquote with optional footer.
+    <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+        Lee Jordan
+    <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></pre>                    <br>
+
+                    <p class="voice">cursive for captions and voice</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"voice"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <p><small>Small for legal copy, disclaimers and copyright information.</small></p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                    <br>
+
+                    <p class="monospaced">REFERRAL CODE / URL</p>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"monospaced"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>                </div>
+                <br>
+
+                <div class="col-md-4 page-section__content">
+                    <div class="panel">
+                        <div class="panel__body cd-text">
+                            <h4 class="cd-title">notes</h4>
+                            <p>Our base font size is 16px by default and 14px when the viewport is below 768px wide.</p>
+                            <p>Paragraphs should have a maximum width of 555px to ensure an optimum line length of around 75 characters.</p>
+                            <p>Avoid center aligned paragraphs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">heading text image replacement</h2>
+            <p class="cd-text">We prefer this method for using typographical images (preferably svgs) as a heading element.</p>
+
+            <h3><img src="../images/banners/flapjack-banner.svg" class="img-responsive" alt="flapjacks are here!"></h3>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/images/banners/flapjack-banner.svg"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"flapjacks are here!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">content example</h2>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>conveniently</h1>
+                    <p class="lead">Intrinsicly exploit virtual infomediaries vis-a-vis equity invested processes. Interactively iterate error free.</p>
+                    <h2>integrate cross functional</h2>
+                    <p>Synergistically disseminate optimal expertise whereas state of the art strategic theme areas. Monotonectally mesh out-of-the-box imperatives before 24/7 potentialities. Rapidiously productize team building portals with seamless innovation. Conveniently. Efficiently provide access to synergistic.</p>
+                    <blockquote>
+                        <p>
+                            Capitalise on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.
+                        </p>
+                        <footer>
+                            Lee Jordan
+                        </footer>
+                    </blockquote>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

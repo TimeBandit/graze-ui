@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | basics buttons</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="forms">forms</a></li>
+                                                    <li><a href="images">images</a></li>
+                                                    <li><a href="links">links</a></li>
+                                                    <li><a href="lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="mixins">mixins</a></li>
+                                                    <li><a href="tables">tables</a></li>
+                                                    <li><a href="typography">typography</a></li>
+                                                    <li><a href="utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/accordion">accordion</a></li>
+                                                    <li><a href="../components/alerts">alerts</a></li>
+                                                    <li><a href="../components/animations">animations</a></li>
+                                                    <li><a href="../components/breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="../components/cookie-message">cookie message</a></li>
+                                                    <li><a href="../components/features">features</a></li>
+                                                    <li><a href="../components/footer">footer</a></li>
+                                                    <li><a href="../components/grid-system">grid system</a></li>
+                                                    <li><a href="../components/health-badges">health badges</a></li>
+                                                    <li><a href="../components/icons">icons</a></li>
+                                                    <li><a href="../components/navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="../components/page-sections">page sections</a></li>
+                                                    <li><a href="../components/pagination">pagination</a></li>
+                                                    <li><a href="../components/panels">panels</a></li>
+                                                    <li><a href="../components/progress">progress</a></li>
+                                                    <li><a href="../components/ribbons">ribbons</a></li>
+                                                    <li><a href="../components/sashes">sashes</a></li>
+                                                    <li><a href="../components/stickers">stickers</a></li>
+                                                    <li><a href="../components/tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="cd-text cd-title">buttons</h1>
+            <p class="cd-text">Buttons are constructed by applying one or more modifying classes to the standard button and will work on standard links as well as button elements.</p>
+
+            <ul class="cd-text">
+                <li>Buttons should not be used within a paragraph, use standard links instead</li>
+                <li>Buttons should always be used to submit a form</li>
+                <li>Primary buttons should only be used sparingly to highlight the most favoured actions on a page</li>
+            </ul>
+
+            <h2 class="cd-text cd-title">types</h2>
+
+            <h3 class="cd-text cd-title">default</h3>
+
+            <button class="button">default</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">primary</h3>
+            <p class="cd-text">A primary button should be used to highlight the primary or most favoured action on a page. If there is only one main call to action on a page, it should be a primary button. There should rarely be more than one primary action on any given page.</p>
+
+            <button class="button button--primary">primary</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary"</span>&gt;</span>primary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">secondary</h3>
+            <p class="cd-text">A secondary button should be used to highlight the secondary action of a page or where there is a repeated, but important action to perform. For example, multiple "add to cart" buttons on a product listing page.</p>
+
+            <button class="button button--secondary">secondary</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--secondary"</span>&gt;</span>secondary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">continue</h3>
+            <p class="cd-text">The continue button should be used as part of a user journey to move to the next stage and should always be primary.</p>
+
+            <button class="button button--primary button--continue">continue</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue"</span>&gt;</span>continue<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">back</h3>
+            <p class="cd-text">The back button should be used as part of a user journey to move back to the previous stage.</p>
+
+            <button class="button button--back">back</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--back"</span>&gt;</span>back<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">states</h2>
+
+            <h3 class="cd-text cd-title">disabled</h3>
+            <p class="cd-text">The <code>disabled</code> attribute should be used on buttons to make them visually disabled. For links, the <code>.button--disabled</code> class should be used as links do not have a disabled attribute.</p>
+
+            <p>
+            <button class="button" disabled>disabled button</button>
+<a class="button button--disabled" href="buttons#">disabled link</a>
+            </p>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--disabled"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>disabled link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+            <p>
+            <button class="button button--primary" disabled>disabled button</button>
+<a class="button button--primary button--disabled" href="buttons#">disabled link</a>
+            </p>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--disabled"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>disabled link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+            <p>
+            <button class="button button--secondary" disabled>disabled button</button>
+<a class="button button--secondary button--disabled" href="buttons#">disabled link</a>
+            </p>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--secondary"</span> <span class="hljs-attribute">disabled</span>&gt;</span>disabled button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--secondary button--disabled"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>disabled link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">active</h3>
+            <p class="cd-text">Makes the button appear active.</p>
+
+            <button class="button button--primary button--active">active button</button>
+<button class="button button--secondary button--active">active button</button>
+<button class="button button--active">active button</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--active"</span>&gt;</span>active button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--secondary button--active"</span>&gt;</span>active button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--active"</span>&gt;</span>active button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">sizes</h2>
+
+            <h3 class="cd-text cd-title">small</h3>
+            <p class="cd-text">Small buttons should be used sparingly to minimise their visual impact on a content heavy page, or as a way to reduce the importance of an action.</p>
+
+            <button class="button button--sm">small</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--sm"</span>&gt;</span>small<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">default</h3>
+            <p class="cd-text">The default button size should generally be used everywhere.</p>
+
+            <button class="button">default</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>default<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">large</h3>
+            <p class="cd-text">Large buttons should be used sparingly to draw attention to a certain action and should generally only be applied to primary buttons</p>
+
+            <button class="button button--lg">large</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--lg"</span>&gt;</span>large<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">full width block buttons</h2>
+            <p class="cd-text">Full width block buttons will fill the width of their containing element.</p>
+
+            <button class="button button--block">block</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block"</span>&gt;</span>block<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">responsive block buttons</h2>
+            <p class="cd-text">It's possible to have buttons which are only full width below certain breakpoints.</p>
+
+            <button class="button button--block-xs">block-xs</button>
+<button class="button button--block-sm">block-sm</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>block-xs<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-sm"</span>&gt;</span>block-sm<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">button icons</h2>
+            <p class="cd-text">Icons can be added to buttons to give context.</p>
+
+            <ul class="cd-text">
+                <li>Icons in buttons should always be on the left</li>
+                <li>Never use an icon on it's own in a button and always provide a text description.
+                <li>Be sure to use icons consistently by referencing the <a href="http://pistachio.graze.com/basics/icons">icons list</a></li>
+            </ul>
+
+            <button class="button button--primary"><i class="fa fa-user"></i> my account</button>
+<button class="button"><i class="fa fa-facebook-square"></i> share on facebook</button>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-user"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> my account<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-facebook-square"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> share on facebook<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">button groups</h2>
+            <p class="cd-text">Button groups are intended for use as a visual way of grouping lots of related actions.</p>
+            <p class="cd-text">A button group should not be used for presenting a collection of links to other pages and you should instead use an unordered list or have your links formatted inside a paragraph of text.</p>
+            <p class="cd-text">A button group should not be used for pagination in place of the pagination module.</p>
+
+            <div class="button-group">
+    <button class="button">first</button>
+    <button class="button">second</button>
+    <button class="button">third</button>
+</div>
+<div class="button-group">
+    <button class="button">fourth</button>
+    <button class="button">fifth</button>
+    <button class="button">six</button>
+</div>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>first<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>second<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>third<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>fourth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>fifth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>six<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <p class="cd-text">If your button group wraps on smaller screens, consider using the responsive block button classes.</p>
+
+            <div class="button-group button--block-xs">
+    <button class="button button--block-xs">first</button>
+    <button class="button button--block-xs">second</button>
+    <button class="button button--block-xs">third</button>
+    <button class="button button--block-xs">fourth</button>
+    <button class="button button--block-xs">fifth</button>
+</div>
+<div class="button-group button--block-xs">
+    <button class="button button--block-xs">sixth</button>
+    <button class="button button--block-xs">seventh</button>
+    <button class="button button--block-xs">eigth</button>
+    <button class="button button--block-xs">ninth</button>
+    <button class="button button--block-xs">tenth</button>
+</div>
+
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group button--block-xs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>first<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>second<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>third<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>fourth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>fifth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group button--block-xs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>sixth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>seventh<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>eigth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>ninth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--block-xs"</span>&gt;</span>tenth<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">button dropdowns</h2>
+            <p class="cd-text">A button can be a dropdown list. This should never replace a <code>select</code> element in a form, but is suitable for small collections of options or links. More information can be found in the <a href="http://pistachio.graze.com/basics/navigation#dropdown-list">dropdown list documentation</a>.</p>
+            <ul class="nav nav--dropdown nav--dropdown-inline" data-p-module="dropDown">
+    <li class="nav__dropdown">
+        <button class="button button--dropdown">
+            switch country
+        </button>
+        <ul class="nav__dropdown__menu">
+            <li>
+                <a href="buttons#0">
+                    United Kingdom
+                </a>
+            </li>
+            <li>
+                <a href="buttons#0">
+                    United states of America
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav nav--dropdown nav--dropdown-inline"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"dropDown"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav__dropdown"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--dropdown"</span>&gt;</span>
+            switch country
+        <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav__dropdown__menu"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span>&gt;</span>
+                    United Kingdom
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span>&gt;</span>
+                    United states of America
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | basics utilities</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="forms">forms</a></li>
+                                                    <li><a href="images">images</a></li>
+                                                    <li><a href="links">links</a></li>
+                                                    <li><a href="lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="mixins">mixins</a></li>
+                                                    <li><a href="tables">tables</a></li>
+                                                    <li><a href="typography">typography</a></li>
+                                                    <li><a href="utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/accordion">accordion</a></li>
+                                                    <li><a href="../components/alerts">alerts</a></li>
+                                                    <li><a href="../components/animations">animations</a></li>
+                                                    <li><a href="../components/breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="../components/cookie-message">cookie message</a></li>
+                                                    <li><a href="../components/features">features</a></li>
+                                                    <li><a href="../components/footer">footer</a></li>
+                                                    <li><a href="../components/grid-system">grid system</a></li>
+                                                    <li><a href="../components/health-badges">health badges</a></li>
+                                                    <li><a href="../components/icons">icons</a></li>
+                                                    <li><a href="../components/navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="../components/page-sections">page sections</a></li>
+                                                    <li><a href="../components/pagination">pagination</a></li>
+                                                    <li><a href="../components/panels">panels</a></li>
+                                                    <li><a href="../components/progress">progress</a></li>
+                                                    <li><a href="../components/ribbons">ribbons</a></li>
+                                                    <li><a href="../components/sashes">sashes</a></li>
+                                                    <li><a href="../components/stickers">stickers</a></li>
+                                                    <li><a href="../components/tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="cd-text cd-title">utilities</h1>
+            <p class="cd-text">A collection of utility classes to aid layout, responsiveness, and accessibility</p>
+
+            <h2 class="cd-text cd-title">spacing utilities</h2>
+            <p class="cd-text">We've put a lot of effort into making sure all of our various elements and components have sensible spacing but there will always be situations in which it's prudent to add or remove vertical spacing.</p>
+
+            <div class="page-section page-section--bleed page-section--alternate">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <p class="margin-reset">.margin-reset</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p class="margin-top">.margin-top</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p class="margin-bottom">.margin-bottom</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">text alignment</h2>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="panel text-left">
+                        <div class="panel__body">
+                            .text-left
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="panel text-center">
+                        <div class="panel__body">
+                            .text-center
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="panel text-right">
+                        <div class="panel__body">
+                            .text-right
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">responsive text alignment</h2>
+            <p class="cd-text">Align text differently at different breakpoints. The breakpoint in the class name describes the breakpoint <strong>above</strong> which the text alignment is applied. Used in combination with a default text alignment utility class.</p>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel text-left-xs text-center">
+                        <div class="panel__body">
+                            .text-left-xs
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel text-left-sm text-center">
+                        <div class="panel__body">
+                            .text-left-sm
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel text-left-md text-center">
+                        <div class="panel__body">
+                            .text-left-md
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel text-left-lg text-center">
+                        <div class="panel__body">
+                            .text-left-lg
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">alignment</h2>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel text-center center-block" style="width: 300px;">
+                        <div class="panel__body">
+                            .center-block
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel pull-left text-center">
+                        <div class="panel__body">
+                            .pull-left
+                        </div>
+                    </div>
+                    <div class="panel pull-right text-center">
+                        <div class="panel__body">
+                            .pull-right
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">responsive alignment</h2>
+            <p class="cd-text">Align elements differently at different breakpoints. The breakpoint in the class name describes the breakpoint <strong>above</strong> which the alignment is applied.</p>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel">
+                        <div class="panel__body">
+                            .pull-right-xs
+                            <img src="../images/feature/half-honey.jpg" class="img-responsive center-block pull-right-xs">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel">
+                        <div class="panel__body">
+                            .pull-right-sm
+                            <img src="../images/feature/half-cashew.jpg" class="img-responsive center-block pull-right-sm">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel">
+                        <div class="panel__body">
+                            .pull-right-md
+                            <img src="../images/feature/half-smoothie.jpg" class="img-responsive center-block pull-right-md">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel">
+                        <div class="panel__body">
+                            .pull-right-lg
+                            <img src="../images/feature/half-honey.jpg" class="img-responsive center-block pull-right-lg">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">responsive visiblity</h2>
+            <p class="cd-text">Use combinations of these to change visiblity of elements across different breakpoints.</p>
+            <h3 class="cd-text cd-title">hidden</h3>
+            <div class="row">
+                <div class="col-xs-2">
+                    <p>.hidden-xxs</p>
+                    <div class="panel panel--brand hidden-xxs text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.hidden-xs</p>
+                    <div class="panel panel--brand hidden-xs text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.hidden-sm</p>
+                    <div class="panel panel--brand hidden-sm text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.hidden-md</p>
+                    <div class="panel panel--brand hidden-md text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.hidden-lg</p>
+                    <div class="panel panel--brand hidden-lg text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="cd-text cd-title">visible</h3>
+            <p class="cd-text">Be sure to use the correct class based on the display attribute of the element you are making visible. for example, applying visible-sm-block to an inline element will cause it to be displayed as a block element and potentially break your layout.</p>
+            <div class="row">
+                <div class="col-xs-2">
+                    <p>.visible-xxs-block</p>
+                    <div class="panel panel--alternate visible-xxs-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-xs-block</p>
+                    <div class="panel panel--alternate visible-xs-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-sm-block</p>
+                    <div class="panel panel--alternate visible-sm-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-md-block</p>
+                    <div class="panel panel--alternate visible-md-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-lg-block</p>
+                    <div class="panel panel--alternate visible-lg-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-xs-2">
+                    <p>.visible-xxs-inline</p>
+                    <button class="button visible-xxs-inline text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-xs-inline</p>
+                    <button class="button visible-xs-inline text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-sm-inline</p>
+                    <button class="button visible-sm-inline text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-md-inline</p>
+                    <button class="button visible-md-inline text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-lg-inline</p>
+                    <button class="button visible-lg-inline text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col-xs-2">
+                    <p>.visible-xxs-inline-block</p>
+                    <button class="button visible-xxs-inline-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-xs-inline-block</p>
+                    <button class="button visible-xs-inline-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-sm-inline-block</p>
+                    <button class="button visible-sm-inline-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-md-inline-block</p>
+                    <button class="button visible-md-inline-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+                <div class="col-xs-2">
+                    <p>.visible-lg-inline-block</p>
+                    <button class="button visible-lg-inline-block text-center">
+                        <i class="fa fa-check-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <h2 class="cd-text cd-title">accessibility utilities</h2>
+            <h3 class="cd-text cd-title">text for assistive devices</h3>
+            <p class="cd-text">Where appropriate you can place explanatory text with the <code>.sr-only</code> class which is only visible to assitive devices such as screen readers. You should consider doing this if the meaning of your functionality may be ambiguous without further explanation.</p>
+
+            <span class="sr-only">you're currently on page </span>1
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>you're currently on page <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>1</pre>
+            <h3 class="cd-text cd-title">hiding elements</h3>
+            <p class="cd-text">When an element is visually disabled and unusable it's a good idea to also apply the <code>aria-hidden</code> property to explicitly hide it in assistive devices to avoid confusion.</p>
+            <a class="pagination__list__item pagination__list__item--disabled" href="utilities#" tabindex="-1" rel="prev" aria-label="Previous">
+    <span aria-hidden="true">
+        <i class="fa fa-chevron-left"></i>
+    </span>
+</a>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pagination__list__item pagination__list__item--disabled"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"-1"</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"prev"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Previous"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-chevron-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

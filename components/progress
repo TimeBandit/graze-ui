@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | components progress</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="../basics/forms">forms</a></li>
+                                                    <li><a href="../basics/images">images</a></li>
+                                                    <li><a href="../basics/links">links</a></li>
+                                                    <li><a href="../basics/lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/mixins">mixins</a></li>
+                                                    <li><a href="../basics/tables">tables</a></li>
+                                                    <li><a href="../basics/typography">typography</a></li>
+                                                    <li><a href="../basics/utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="accordion">accordion</a></li>
+                                                    <li><a href="alerts">alerts</a></li>
+                                                    <li><a href="animations">animations</a></li>
+                                                    <li><a href="breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="cookie-message">cookie message</a></li>
+                                                    <li><a href="features">features</a></li>
+                                                    <li><a href="footer">footer</a></li>
+                                                    <li><a href="grid-system">grid system</a></li>
+                                                    <li><a href="health-badges">health badges</a></li>
+                                                    <li><a href="icons">icons</a></li>
+                                                    <li><a href="navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="page-sections">page sections</a></li>
+                                                    <li><a href="pagination">pagination</a></li>
+                                                    <li><a href="panels">panels</a></li>
+                                                    <li><a href="progress">progress</a></li>
+                                                    <li><a href="ribbons">ribbons</a></li>
+                                                    <li><a href="sashes">sashes</a></li>
+                                                    <li><a href="stickers">stickers</a></li>
+                                                    <li><a href="tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="cd-text cd-title">progress indicator</h1>
+            <p class="cd-text">Indicates progress along a set of steps.</p>
+
+            <h3 class="cd-text cd-title">three discrete steps with no step count</h3>
+
+            <p class="cd-text">Up to three discrete progress steps are displayed at all times.</p>
+
+            <div class="progress text-center">
+    <div class="progress__bar">
+        <div class="progress__bar__fill" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="33%" style="width: 33%;"></div>
+    </div>
+    <div class="progress__steps grid grid--bleed grid--justify-space-between">
+        <p class="grid__col-auto progress__steps__step">Step 1</p>
+        <p class="grid__col-auto progress__steps__step">Step 2</p>
+        <p class="grid__col-auto progress__steps__step">Step 3</p>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__bar"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__bar__fill"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"33%"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 33%;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__steps grid grid--bleed grid--justify-space-between"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 1<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 2<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">step count fall-back to support more than three discrete steps</h3>
+
+            <p class="cd-text">Any number of discrete steps greater than three are hidden and replaced with a step count at pre-set breakpoints. This only accounts for the number of steps and does not consider the length of each label.</p>
+
+            <div class="progress text-center">
+    <div class="progress__bar">
+        <div class="progress__bar__fill" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40%" style="width: 40%;"></div>
+    </div>
+    <div class="progress__steps grid grid--bleed grid--justify-space-between">
+        <p class="grid__col-auto progress__steps__step">Step 1</p>
+        <p class="grid__col-auto progress__steps__step">Step 2</p>
+        <p class="grid__col-auto progress__steps__step">Step 3</p>
+        <p class="grid__col-auto progress__steps__step">Step 4</p>
+        <p class="grid__col-auto progress__steps__step">Step 5</p>
+        <p class="grid__col-12 progress__steps__step-count">Step 2 of 5</p>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__bar"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__bar__fill"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"40%"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 40%;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__steps grid grid--bleed grid--justify-space-between"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 1<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 2<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 4<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto progress__steps__step"</span>&gt;</span>Step 5<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-12 progress__steps__step-count"</span>&gt;</span>Step 2 of 5<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">step count only with no discrete steps</h3>
+
+            <p class="cd-text">By providing no discrete steps the step count will always be displayed at each breakpoint.</p>
+
+            <div class="progress text-center">
+    <div class="progress__bar">
+        <div class="progress__bar__fill" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="33%" style="width: 33%;"></div>
+    </div>
+    <div class="progress__steps grid grid--bleed grid--justify-space-between">
+        <p class="grid__col-12 progress__steps__step-count">Step 1 of 3</p>
+    </div>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress text-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__bar"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__bar__fill"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"progressbar"</span> <span class="hljs-attribute">aria-valuemin</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-valuemax</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">aria-valuenow</span>=<span class="hljs-value">"33%"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 33%;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"progress__steps grid grid--bleed grid--justify-space-between"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-12 progress__steps__step-count"</span>&gt;</span>Step 1 of 3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">update progress on page load</h2>
+            <p class="cd-text">To change the progress indicator between pages set the <code>width</code> of the <code>.progress__bar__fill</code> element to your desired percentage. You should also update the <code>aria-valuenow</code> attribute for improved accessiblity. If you're using the <code>.progress__step-count</code> element then you should update the step number there too.</p>
+
+            <h2 class="cd-text cd-title">update progress via JavaScript</h2>
+            <p class="cd-text">Changing the width of the <code>.progress__bar__fill</code> element via JavaScript will trigger an animation on the <code>.progress__bar__fill</code> element. You should also update the <code>aria-valuenow</code> attribute at the same time for improved accessiblity.</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

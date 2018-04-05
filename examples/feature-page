@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | examples feature page</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="../basics/forms">forms</a></li>
+                                                    <li><a href="../basics/images">images</a></li>
+                                                    <li><a href="../basics/links">links</a></li>
+                                                    <li><a href="../basics/lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../basics/mixins">mixins</a></li>
+                                                    <li><a href="../basics/tables">tables</a></li>
+                                                    <li><a href="../basics/typography">typography</a></li>
+                                                    <li><a href="../basics/utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/accordion">accordion</a></li>
+                                                    <li><a href="../components/alerts">alerts</a></li>
+                                                    <li><a href="../components/animations">animations</a></li>
+                                                    <li><a href="../components/breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="../components/cookie-message">cookie message</a></li>
+                                                    <li><a href="../components/features">features</a></li>
+                                                    <li><a href="../components/footer">footer</a></li>
+                                                    <li><a href="../components/grid-system">grid system</a></li>
+                                                    <li><a href="../components/health-badges">health badges</a></li>
+                                                    <li><a href="../components/icons">icons</a></li>
+                                                    <li><a href="../components/navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="../components/page-sections">page sections</a></li>
+                                                    <li><a href="../components/pagination">pagination</a></li>
+                                                    <li><a href="../components/panels">panels</a></li>
+                                                    <li><a href="../components/progress">progress</a></li>
+                                                    <li><a href="../components/ribbons">ribbons</a></li>
+                                                    <li><a href="../components/sashes">sashes</a></li>
+                                                    <li><a href="../components/stickers">stickers</a></li>
+                                                    <li><a href="../components/tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="article-page">article page</a></li>
+                                                <li><a href="drop-down-menu">drop down menu</a></li>
+                                                <li><a href="feature-page">feature page</a></li>
+                                                <li><a href="login-account-nav">login account nav</a></li>
+                                                <li><a href="off-screen-menu">off screen menu</a></li>
+                                                <li><a href="product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="grid">
+            <div class="grid__col-xs-12 grid__col--bleed-y">
+                <div class="feature-full" style="background-image:url('../images/banners/banner-berry-full-right.jpg');">
+    <div class="feature-full__container">
+        <div class="feature-full__content">
+            <h2>good just got exciting</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum.</p>
+            <a href="feature-page#0" class="button button--primary button--continue button--lg button--block-xs">get started</a>
+        </div>
+    </div>
+</div>
+            </div>
+            <ul class="grid">
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="feature-page#0" class="feature feature--square" style="background-image:url('../images/feature/square-ppnuts.jpg');"></a>
+        <p>Our punchy protein nuts are the tastiest way to enjoy more protein.</p>
+        <div class="grid__cell-footer">
+            <a href="feature-page#0">punchy protein nuts <span class="fa fa-angle-right"></span></a>
+        </div>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="feature-page#0" class="feature feature--square" style="background-image:url('../images/feature/square-blackboard.jpg');">
+        </a>
+        <p>Take a look at our taste expert Ellie’s favourite snacks.</p>
+        <div class="grid__cell-footer">
+            <a href="feature-page#0">view snacks <span class="fa fa-angle-right"></span></a>
+        </div>
+    </li>
+    <li class="grid__col-xs-6 grid__col-sm-4">
+        <a href="feature-page#0" class="feature feature--square" style="background-image:url('../images/feature/square-fudge.jpg');">
+        </a>
+        <p>We have over 50 new recipes including our salted fudge and peanut cookie.</p>
+        <div class="grid__cell-footer">
+            <a href="feature-page#0">view all new recipes <span class="fa fa-angle-right"></span></a>
+        </div>
+    </li>
+</ul>
+            <div class="grid__col-xs-12">
+                <h3 class="margin-reset">latest collections</h3>
+            </div>
+            <ul class="grid">
+    <li class="grid__col-12 grid__col-xs-8">
+        <a href="feature-page#0" class="feature feature--half" style="background-image:url('../images/feature/half-running.jpg');">
+            <h2 class="feature__heading">
+                the running collection: fuel your feet
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-12 grid__col-xs-4">
+        <a href="feature-page#0" class="feature feature--square" style="background-image:url('../images/feature/square-dippers.jpg');">
+            <h2 class="feature__heading">
+                dips &amp; dippers collection
+            </h2>
+        </a>
+    </li>
+</ul>
+            <div class="grid__col-xs-12">
+                <h3 class="margin-reset">blog: top tips and snack hacks from our taste experts</h3>
+            </div>
+            <ul class="grid">
+    <li class="grid__col-xs-4">
+        <a href="feature-page#0" class="feature feature--half" style="background-image:url('../images/feature/half-honey.jpg');">
+            <h2 class="feature__heading">
+                homemade honeycomb
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-xs-4">
+        <a href="feature-page#0" class="feature feature--half" style="background-image:url('../images/feature/half-cashew.jpg');">
+            <h2 class="feature__heading">
+                benefits of cashews
+            </h2>
+        </a>
+    </li>
+    <li class="grid__col-xs-4">
+        <a href="feature-page#0" class="feature feature--half" style="background-image:url('../images/feature/half-smoothie.jpg');">
+            <h2 class="feature__heading">
+                smoothie bowl recipes
+            </h2>
+        </a>
+    </li>
+</ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>

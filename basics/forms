@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en" class="experience-core">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pistachio | basics forms</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/github-gist.css">
+    <link rel="stylesheet" type="text/css" href="../css/pistachio.css">
+    <link rel="stylesheet" type="text/css" href="../css/docs.css">
+
+    <script type="text/javascript">
+    /**
+ * Info
+ * ---
+ * This file should not be pulled in to a page via an HTTP request (src=".../")
+ * to make the check more performant and prevent layout issues if the script is
+ * ever blocked
+ */
+
+(function(document, window) {
+    var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+    if (cutsTheMustard) {
+        document.documentElement.className = document.documentElement.className.replace(/\bexperience-core\b/g, 'experience-enhanced');
+    }
+})(document, window);
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="off-screen-trigger" class="off-screen-trigger" data-p-module="offScreen">
+
+<header class="off-screen-header page-section page-section--bleed cd-text">
+    <div class="container">
+        <div class="grid grid--align-center grid--bleed">
+            <div class="grid__col-2 off-screen-trigger-spacer">
+                <label for="off-screen-trigger" class="off-screen-trigger-label" onclick>
+                    <i class="fa fa-bars fa-2x"></i>
+                    <span class="sr-only">toggle menu</span>
+                </label>
+            </div>
+            <div class="grid__col-10 grid--direction-row grid--align-center">
+                <img src="../images/pistachio.svg" class="pistachio-logo hidden-xxs">
+                <p class="pistachio-header">
+                    Pistachio
+                    <span class="pistachio-subheader">the front end framework and pattern library for graze.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="off-screen-menu">
+    <div class="page-section page-section--alternate page-section--bleed">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="nav-heading hidden-sm hidden-md hidden-lg hidden-xlg">
+                        categories:
+                    </h4>
+                    <ul class="nav nav--dropdown" data-p-module="dropDown" data-dropdown-offscreen="xxs,xs">
+                        <li>
+                            <a class="nav__item" href="../index.html">
+                                principles
+                            </a>
+                        </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../basics">basics</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="buttons">buttons</a></li>
+                                                    <li><a href="../patterns/colour-palette">colour palette</a></li>
+                                                    <li><a href="forms">forms</a></li>
+                                                    <li><a href="images">images</a></li>
+                                                    <li><a href="links">links</a></li>
+                                                    <li><a href="lists">lists</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="mixins">mixins</a></li>
+                                                    <li><a href="tables">tables</a></li>
+                                                    <li><a href="typography">typography</a></li>
+                                                    <li><a href="utilities">utilities</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../basics">
+                                                    view all basics
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../components">components</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                            <li>
+                                                <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/accordion">accordion</a></li>
+                                                    <li><a href="../components/alerts">alerts</a></li>
+                                                    <li><a href="../components/animations">animations</a></li>
+                                                    <li><a href="../components/breadcrumbs">breadcrumbs</a></li>
+                                                    <li><a href="../components/cookie-message">cookie message</a></li>
+                                                    <li><a href="../components/features">features</a></li>
+                                                    <li><a href="../components/footer">footer</a></li>
+                                                    <li><a href="../components/grid-system">grid system</a></li>
+                                                    <li><a href="../components/health-badges">health badges</a></li>
+                                                    <li><a href="../components/icons">icons</a></li>
+                                                    <li><a href="../components/navigation">navigation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav__dropdown__menu__col">
+                                                    <li><a href="../components/off-screen-menu">off screen menu</a></li>
+                                                    <li><a href="../components/page-sections">page sections</a></li>
+                                                    <li><a href="../components/pagination">pagination</a></li>
+                                                    <li><a href="../components/panels">panels</a></li>
+                                                    <li><a href="../components/progress">progress</a></li>
+                                                    <li><a href="../components/ribbons">ribbons</a></li>
+                                                    <li><a href="../components/sashes">sashes</a></li>
+                                                    <li><a href="../components/stickers">stickers</a></li>
+                                                    <li><a href="../components/tooltips">tooltips</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../components">
+                                                    view all components
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                            <li class="nav__dropdown">
+                                <a class="nav__dropdown__item" href="../examples">examples</a>
+
+                                    <ul class="nav__dropdown__menu nav__dropdown__menu--wide">
+                                                <li><a href="../examples/article-page">article page</a></li>
+                                                <li><a href="../examples/drop-down-menu">drop down menu</a></li>
+                                                <li><a href="../examples/feature-page">feature page</a></li>
+                                                <li><a href="../examples/login-account-nav">login account nav</a></li>
+                                                <li><a href="../examples/off-screen-menu">off screen menu</a></li>
+                                                <li><a href="../examples/product-tiles-full-width">product tiles full width</a></li>
+                                                <li><a href="../examples/product-tiles-with-nav">product tiles with nav</a></li>
+                                            <li class="nav__dropdown__menu__footer">
+                                                <a href="../examples">
+                                                    view all examples
+                                                </a>
+                                            </li>
+                                    </ul>
+
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="cd-page-nav">
+        <p class="cd-text cd-title">contents:</p>
+        <ol class="cd-text"></ol>
+        <hr>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="cd-text cd-title">forms</h1>
+            <p class="cd-text">We've tried to stay close to default form styling to keep our form UI as familiar to users as possible whilst offering various tweaks to make them easier to use and accessible. Forms are for the user to submit information to us and should therefore be functional and useable above all else.</p>
+
+            <h2 class="cd-text cd-title">usage notes</h2>
+            <div class="panel">
+                <div class="panel__body">
+                    <h4 class="cd-text cd-title"><i>heads up!</i></h4>
+                    <p class="cd-text"><i>Form elements are not styled by default.  Please pay attention to different form classes and modifiers in order to style a form element.</i></p>
+                </div>
+            </div>
+            <p class="cd-text">The goal of a form is for a user to provide information. Therefore, we should make sure that the the user is guided as clearly as possible towards this goal. Above all else keep it simple!</p>
+            <ol class="cd-text">
+                <li><strong>Use succinct, unambiguous messaging</strong> to guide the user via combinations of labels, placeholders, contextual help messages, and validation.</li>
+                <li><strong>Always ensure you have enough room</strong> for your fields. The user should be able to see what they have entered into a field at smaller viewport sizes. You can use bootstrap column classes in your form to have multiple inputs per row but remember useability is the most important concern here and you should not sacrifice that for the sake of fitting everything into a smaller space.</li>
+                <li><strong>Labels should always be present</strong>; do not rely entirely on a placeholder. Once an input is focused the placeholder disappears and the user has lost context for the input.</li>
+                <li><strong>Labels should nearly always be directly above the input</strong>. This is learnt and expected behaviour and greatly improves clarity and engagement, especially on mobile. Some exceptions can be made for a simple single line form but in general labels above inputs work best.</li>
+                <li><strong>Placeholders should only be used sparingly</strong> when they can provide a meaningful suggestion as to the expected structure of the content. They should not simply repeat the label. Acceptable uses of placeholder:
+                    <ul>
+                        <li>"e.g. Sam Smith" for name inputs</li>
+                        <li>"example@address.com" for email inputs</li>
+                        <li>"3 digits on back of card" for security number</li>
+                    </ul>
+                </li>
+                <li><strong>Fieldsets are recommended for accessiblity but are unstyled and have no visible border</strong>. In addition, the legend tag is rendered the same as a label. Fieldsets are especially recommended for use with groups of radio buttons and checkboxes.</li>
+                <li><strong>Dropdowns (or <code>select</code> elements) are to be used sparingly</strong> because they have <a href="https://www.nngroup.com/articles/drop-down-menus-use-sparingly/">known usability issues</a>. As a rule of thumb, if you have less than 5 options, <a href="forms#checkboxes-and-radio-buttons">radio buttons</a> are preferred. For longer lists of options, consider using a regular <code>input</code> instead if possible.</li>
+                <li><strong>Avoid using the <code>size</code> attribute on individual inputs</strong> as you get more inconsistent results. Instead, use the various classes as defined in the example forms below.</li>
+            </ol>
+
+            <h2 class="cd-text cd-title">example form</h2>
+            <p class="cd-text"><strong>A <code>.form-group</code> element should be used to wrap input/label group to ensure consistent spacing</strong>. The <code>.form-group</code> class can be applied to a <code>div</code> or a <code>fieldset</code>.</p>
+            <p class="cd-text"><strong>All inputs should use the <code>.form-control</code> class</strong> which makes them fill the full width of their parent element. Ideally, most inputs would take up an entire row for clarity, but where inputs make sense to be grouped (as with the first and last name example below), you can use the <a href="http://pistachio.graze.com/basics/grid-system#bootstrap-grid">bootstrap grid classes</a> to achieve this. Inspect the markup below for an example.</p>
+            <p class="cd-text"><strong>Help text for guidance should be positioned below the input</strong> by use of the <code>.form-group__help-block</code> class preferably using a <code>&lt;small&gt;</code> tag.</p>
+
+            <form method="get" action="javascript:void(0);">
+    <div class="form-group">
+        <label for="email">email</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="example@address.com">
+        <small class="form-group__help-block">We will use this to validate your account.</small>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-6">
+            <label for="first-name">first name</label>
+            <input type="text" class="form-control" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="last-name">last name</label>
+            <input type="text" class="form-control" id="last-name" name="last-name">
+        </div>
+    </div>
+
+    <fieldset class="form-group">
+        <legend>your title</legend>
+
+        <div class="form-select" data-p-module="formField">
+            <label class="form-select__item">
+                <input name="title-inline" type="radio" value="1" checked>Mr
+            </label>
+
+            <label class="form-select__item">
+                <input name="title-inline" type="radio" value="2">Mrs
+            </label>
+
+            <label class="form-select__item">
+                <input name="title-inline" type="radio" value="3">Other
+            </label>
+        </div>
+    </fieldset>
+
+    <a class="button" href="forms#0">back</a>
+    <button class="button button--primary button--continue" type="submit">continue</button>
+</form>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"email"</span>&gt;</span>email<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"example@address.com"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">small</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group__help-block"</span>&gt;</span>We will use this to validate your account.<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group col-sm-6"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"first-name"</span>&gt;</span>first name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"first-name"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"first-name"</span> <span class="hljs-attribute">required</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group col-sm-6"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"last-name"</span>&gt;</span>last name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"last-name"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"last-name"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>your title<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">checked</span>&gt;</span>Mr
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"2"</span>&gt;</span>Mrs
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"3"</span>&gt;</span>Other
+            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#0"</span>&gt;</span>back<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>continue<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">example short form</h2>
+            <p class="cd-text">Some forms are only small and suitable for a single line. Inputs line up with buttons for that reason. Use the <a href="http://pistachio.graze.com/basics/grid-system#bootstrap-grid">bootstrap grid classes</a> to achieve this. Inspect the example markup below for an example.</p>
+            <form method="get" action="javascript:void(0);">
+    <div class="row">
+        <div class="col-xxs-12">
+            <label for="email-short">signup to our newsletter</label>
+        </div>
+        <div class="form-group col-xs-8">
+            <input type="email" class="form-control" id="email-short" name="email" required placeholder="example@address.com">
+        </div>
+        <div class="col-xs-4">
+            <button class="button button--primary button--continue button--block" type="submit">sign up</button>
+        </div>
+    </div>
+</form>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xxs-12"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"email-short"</span>&gt;</span>signup to our newsletter<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group col-xs-8"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"email-short"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"example@address.com"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-4"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue button--block"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>sign up<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">example inline form</h2>
+            <p class="cd-text">Inline forms are only to be used when a form has a single field via the use of the <code>.form-group--inline</code> class. Inputs in an inline form will be sized to the browser's default width. To enforce input size, you can use an additional sizing class such as <code>form-control--sm</code>, <code>form-control--md</code> or <code>form-control--lg</code>.</p>
+            <form method="get" action="javascript:void(0);">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group form-group--inline">
+                <label for="line-quantity">quantity</label>
+                <input type="number" class="form-control form-control--center form-control--sm" id="line-quantity" name="line-quantity" min="1" value="1">
+                <button class="button button--primary" type="submit">add to cart</button>
+            </div>
+        </div>
+    </div>
+</form>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--inline"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"line-quantity"</span>&gt;</span>quantity<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control form-control--center form-control--sm"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"line-quantity"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"line-quantity"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>add to cart<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">example responsive inline form</h2>
+            <p class="cd-text">It's possible to make an inline form full width below certain breakpoints by using the <code>.form-group--block-sm</code> modifier on a <code>.form-group--inline</code> in combination with <a href="buttons#responsive-block-buttons">responsive block buttons</a>
+            <form method="get" action="javascript:void(0);">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group form-group--inline form-group--block-xs">
+                <label for="line-quantity">form-group--block-xs</label>
+                <input type="number" class="form-control form-control--center form-control--sm" id="line-quantity" name="line-quantity" min="1" value="1">
+                <button class="button button--primary button--block-xs" type="submit">add to cart</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="get" action="javascript:void(0);">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group form-group--inline form-group--block-sm">
+                <label for="line-quantity">form-group--block-sm</label>
+                <input type="number" class="form-control form-control--center form-control--sm" id="line-quantity" name="line-quantity" min="1" value="1">
+                <button class="button button--primary button--block-sm" type="submit">add to cart</button>
+            </div>
+        </div>
+    </div>
+</form>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--inline form-group--block-xs"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"line-quantity"</span>&gt;</span>form-group--block-xs<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control form-control--center form-control--sm"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"line-quantity"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"line-quantity"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--block-xs"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>add to cart<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--inline form-group--block-sm"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"line-quantity"</span>&gt;</span>form-group--block-sm<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control form-control--center form-control--sm"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"line-quantity"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"line-quantity"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--block-sm"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>add to cart<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">example input/button group</h2>
+            <p class="cd-text">More intricate UI is possible by combining <code>.form-group--inline</code> with <a href="buttons#button-groups">button groups</a></p>
+            <form method="get" action="javascript:void(0);">
+    <label for="group-quantity">quantity</label>
+    <div class="form-group form-group--inline button-group">
+        <button class="button"><span class="fa fa-minus-circle" aria-hidden="true"></span><span class="sr-only">remove</span></button>
+        <input type="number" class="form-control form-control--center form-control--sm" id="group-quantity" name="group-quantity" min="1" value="1">
+        <button class="button"><span class="fa fa-plus-circle" aria-hidden="true"></span><span class="sr-only">add</span></button>
+    </div>
+</form>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"group-quantity"</span>&gt;</span>quantity<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--inline button-group"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-minus-circle"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>remove<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control form-control--center form-control--sm"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"group-quantity"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"group-quantity"</span> <span class="hljs-attribute">min</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-plus-circle"</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>add<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">Search form</h2>
+            <p class="cd-text">An accessible search form which uses the <code>.form-control__button</code> class on a button to position it over the top of the input. Appropriate padding on the input is applied by the <code>.form-group--has-feedback</code></p>
+            <form method="get" action="javascript:void(0);">
+    <label for="search">search</label>
+    <div class="form-group form-group--has-feedback">
+        <input type="text" class="form-control" id="search" name="search" placeholder="search the shop..." required>
+        <button class="button form-control__button" type="submit"><i class="fa fa-search"></i><span class="sr-only">search</span></button>
+    </div>
+</form>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"get"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"search"</span>&gt;</span>search<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--has-feedback"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"search the shop..."</span> <span class="hljs-attribute">required</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button form-control__button"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-search"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>search<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">inputs, textareas &amp; dropdowns</h2>
+            <p class="cd-text">These form elements are controlled by a master <code>.form-control</code> class.</p>
+
+            <h3 class="cd-text cd-title">text input</h3>
+            <div class="form-group">
+    <label for="name">your name</label>
+    <input id="name" type="text" name="name" placeholder="Nyan Cat" class="form-control">
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"name"</span>&gt;</span>your name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Nyan Cat"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">disabled input</h3>
+            <div class="form-group">
+    <label for="uid">unique identifier</label>
+    <input id="uid" type="text" name="uid" value="01802efy0hu" disabled class="form-control">
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"uid"</span>&gt;</span>unique identifier<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"uid"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"uid"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"01802efy0hu"</span> <span class="hljs-attribute">disabled</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">textarea</h3>
+            <div class="form-group">
+    <label for="comment">comments</label>
+    <textarea id="comment" name="comment" rows="6" class="form-control"></textarea>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"comment"</span>&gt;</span>comments<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"comment"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"comment"</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"6"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>            <p class="cd-text"><b>Quick Note:</b> Use the <code>rows=""</code> attribute to control textarea height. 6 rows should be considered the minimum size for a textarea. Textareas have a corresponding <code>min-height</code> to ensure they do not fall below this minimum size.</p>
+
+            <h3 class="cd-text cd-title">dropdowns</h3>
+            <div class="form-group">
+    <label for="option">select an option</label>
+    <select id="option" name="option" class="form-control">
+        <option value="1">option 1</option>
+        <option value="2">option 2</option>
+        <option value="3">option 3</option>
+    </select>
+</div>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"option"</span>&gt;</span>select an option<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"option"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"option"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"2"</span>&gt;</span>option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"3"</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>            <p class="cd-text"><strong>Dropdowns (or <code>select</code> elements) are to be used sparingly</strong> because they have <a href="https://www.nngroup.com/articles/drop-down-menus-use-sparingly/">known usability issues</a>. As a rule of thumb, if you have less than 5 options, <a href="forms#checkboxes-and-radio-buttons">radio buttons</a> are preferred. For longer lists of options, consider using a regular <code>input</code> instead if possible.</p>
+
+            <h2 class="cd-text cd-title">checkboxes and radio buttons</h2>
+            <p class="cd-text">Checkboxes and radio buttons should be used to allow users to select from a list of options with ease. We have a basic style for checkboxes and radio buttons normalized across multiple browsers.</p>
+            <h3 class="cd-text cd-title">basic checkboxes</h3>
+            <fieldset class="form-group">
+    <legend>ingredient checklist</legend>
+
+    <div class="checkbox">
+        <label>
+            <input name="checkbox" type="checkbox" value="raisins" checked>raisins
+        </label>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input name="checkbox" type="checkbox" value="chocolate">chocolate
+        </label>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input name="checkbox" type="checkbox" value="blueberries">blueberries
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>ingredient checklist<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"raisins"</span> <span class="hljs-attribute">checked</span>&gt;</span>raisins
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"chocolate"</span>&gt;</span>chocolate
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blueberries"</span>&gt;</span>blueberries
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">basic radio buttons</h3>
+            <fieldset class="form-group">
+    <legend>your favourite snack</legend>
+
+    <div class="radio">
+        <label>
+            <input name="favourite-snack" type="radio" value="1" checked>chocolate pretzel dipper
+        </label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input name="favourite-snack" type="radio" value="2">punchy protein nuts
+        </label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input name="favourite-snack" type="radio" value="3">none of the above
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>your favourite snack<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"radio"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"favourite-snack"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">checked</span>&gt;</span>chocolate pretzel dipper
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"radio"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"favourite-snack"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"2"</span>&gt;</span>punchy protein nuts
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"radio"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"favourite-snack"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"3"</span>&gt;</span>none of the above
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">enhanced inline checkboxes and radio buttons</h2>
+            <p class="cd-text">Relies on the use of pistachio.js and strict markup as shown here for the active states.</p>
+            <fieldset class="form-group">
+    <legend>ingredient checklist</legend>
+
+    <div class="form-select" data-p-module="formField">
+        <label class="form-select__item">
+            <input name="checkbox-inline" type="checkbox" value="raisins" checked>raisins
+        </label>
+        <label class="form-select__item">
+            <input name="checkbox-inline" type="checkbox" value="chocolate">chocolate
+        </label>
+        <label class="form-select__item">
+            <input name="checkbox-inline" type="checkbox" value="blueberries">blueberries
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>ingredient checklist<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"raisins"</span> <span class="hljs-attribute">checked</span>&gt;</span>raisins
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"chocolate"</span>&gt;</span>chocolate
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blueberries"</span>&gt;</span>blueberries
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>            <fieldset class="form-group">
+    <legend>your title</legend>
+
+    <div class="form-select" data-p-module="formField">
+        <label class="form-select__item">
+            <input name="title-inline" type="radio" value="1" checked>Mr
+        </label>
+
+        <label class="form-select__item">
+            <input name="title-inline" type="radio" value="2">Mrs
+        </label>
+
+        <label class="form-select__item">
+            <input name="title-inline" type="radio" value="3">Other
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>your title<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">checked</span>&gt;</span>Mr
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"2"</span>&gt;</span>Mrs
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"title-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"3"</span>&gt;</span>Other
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">with grid usage</h3>
+            <fieldset class="form-group">
+    <legend>ingredient checklist</legend>
+
+    <div class="form-select grid" data-p-module="formField">
+        <label class="grid__col-auto form-select__item">
+            <input name="checkbox-inline" type="checkbox" value="raisins" checked>raisins
+        </label>
+        <label class="grid__col-auto form-select__item">
+            <input name="checkbox-inline" type="checkbox" value="chocolate">chocolate
+        </label>
+        <label class="grid__col-auto form-select__item">
+            <input name="checkbox-inline" type="checkbox" value="blueberries">blueberries
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>ingredient checklist<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select grid"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"raisins"</span> <span class="hljs-attribute">checked</span>&gt;</span>raisins
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"chocolate"</span>&gt;</span>chocolate
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid__col-auto form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blueberries"</span>&gt;</span>blueberries
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">small size variant</h3>
+            <fieldset class="form-group">
+    <legend>ingredient checklist</legend>
+
+    <div class="form-select" data-p-module="formField">
+        <label class="form-select__item form-select__item--sm">
+            <input name="checkbox-inline" type="checkbox" value="raisins" checked>raisins
+        </label>
+        <label class="form-select__item form-select__item--sm">
+            <input name="checkbox-inline" type="checkbox" value="chocolate">chocolate
+        </label>
+        <label class="form-select__item form-select__item--sm">
+            <input name="checkbox-inline" type="checkbox" value="blueberries">blueberries
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>ingredient checklist<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item form-select__item--sm"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"raisins"</span> <span class="hljs-attribute">checked</span>&gt;</span>raisins
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item form-select__item--sm"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"chocolate"</span>&gt;</span>chocolate
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item form-select__item--sm"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"checkbox-inline"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blueberries"</span>&gt;</span>blueberries
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>
+
+            <h2 class="cd-text cd-title">enhanced block checkboxes and radio buttons</h2>
+            <p class="cd-text">A block variation of the enhanced checkboxes and radio buttons.
+            <fieldset class="form-group">
+    <legend>What snacks do you like?</legend>
+
+    <div class="form-select form-select--block" data-p-module="formField">
+        <label class="form-select__item">
+            <input name="prefs" type="checkbox" value="1" checked>raisins
+        </label>
+
+        <label class="form-select__item">
+            <input name="prefs" type="checkbox" value="2">chocolate
+        </label>
+
+        <label class="form-select__item">
+            <input name="prefs" type="checkbox" value="3">blueberries
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>What snacks do you like?<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select form-select--block"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"prefs"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">checked</span>&gt;</span>raisins
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"prefs"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"2"</span>&gt;</span>chocolate
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"prefs"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"3"</span>&gt;</span>blueberries
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>            <fieldset class="form-group">
+    <legend>select your delivery address</legend>
+
+    <div class="form-select form-select--block" data-p-module="formField">
+        <label class="form-select__item">
+            <input name="address-radio" type="radio" value="1" checked>Palm Court, 4 Heron Square, Richmond, Surrey, TW9 1EW
+        </label>
+
+        <label class="form-select__item">
+            <input name="address-radio" type="radio" value="2">Half Way Pond, Georgetown, Grand Cayman, Cayman Islands, British West Indies
+        </label>
+
+        <label class="form-select__item">
+            <input name="address-radio" type="radio" value="3">6762 33 Ave N, St. Petersburg, FL 33710
+        </label>
+    </div>
+</fieldset>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>select your delivery address<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select form-select--block"</span> <span class="hljs-attribute">data-p-module</span>=<span class="hljs-value">"formField"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"address-radio"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">checked</span>&gt;</span>Palm Court, 4 Heron Square, Richmond, Surrey, TW9 1EW
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"address-radio"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"2"</span>&gt;</span>Half Way Pond, Georgetown, Grand Cayman, Cayman Islands, British West Indies
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-select__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"address-radio"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"3"</span>&gt;</span>6762 33 Ave N, St. Petersburg, FL 33710
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">validation states</h2>
+            <p class="cd-text">Validation states provide visual feedback for users during form use to guide their input and highlight erroneous fields.</p>
+
+            <h3 class="cd-text cd-title">valid</h3>
+            <div class="form-group form-group--has-validation form-group--has-feedback form-group--has-success">
+    <label for="password">Success</label>
+    <input type="password" class="form-control" id="password" name="password" value="blah blah" required>
+    <i class="form-control-feedback fa fa-check-circle"></i>
+</div>
+            <br>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--has-validation form-group--has-feedback form-group--has-success"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"password"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blah blah"</span> <span class="hljs-attribute">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control-feedback fa fa-check-circle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">invalid</h3>
+            <div class="form-group form-group--has-validation form-group--has-feedback form-group--has-error">
+    <label for="password-confirm">Error</label>
+    <input type="password" class="form-control" id="password-confirm" name="password-confirm" required>
+    <i class="form-control-feedback fa fa-exclamation-triangle"></i>
+    <small class="form-group__help-block">password is required and cannot be empty</small>
+</div>
+            <br>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group form-group--has-validation form-group--has-feedback form-group--has-error"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"password-confirm"</span>&gt;</span>Error<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"password-confirm"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"password-confirm"</span> <span class="hljs-attribute">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control-feedback fa fa-exclamation-triangle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">small</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group__help-block"</span>&gt;</span>password is required and cannot be empty<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+            <h2 class="cd-text cd-title">validation approach</h2>
+            <p class="cd-text">Ideally, all forms should work without the use of JavaScript by default. The most robust forms use three levels of form validation:</p>
+
+            <h3 class="cd-text cd-title">1) back end validation</h3>
+            <p class="cd-text">Firstly you should validate in the back end. We don't want anything unexpected hitting our databases so we should always handle validation ourselves in the end point that the form submits to. Any error states should be fed back to the view that is loaded and displayed with the corresponding <a href="forms#validation-states">validation state</a>.
+
+            <h3 class="cd-text cd-title">2) HTML validation</h3>
+            <p class="cd-text">We also use HTML validation on the front end to aid in usability. We always try to guide the user to successfully completing the form by making it very clear exactly what we expect to be entered and HTML validation helps with this.</p>
+
+            <h4 class="cd-text cd-title">type</h4>
+            <p class="cd-text">Always use the most appropriate input type. Using the correct input type will aid users on mobile devices especially by providing a context sensitive keyboard. For example using an email type input will give mobile users a keyboard with the @ symbol present and also allow the browser to validate the field itself.</p>
+            <p class="cd-text">MDN has a useful list of available <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#Attributes">HTML5 input types</a> for your reference.</p>
+
+            <form id="input-type" role="form" method="post" action="javascript:void(0);">
+    <label for="email" class="control-label">Try submitting this incomplete email</label>
+    <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" value="invalid-email@">
+    </div>
+    <button type="submit" id="submit-button" class="button button--primary button--continue">validate</button>
+</form>
+            <br>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input-type"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"form"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control-label"</span>&gt;</span>Try submitting this incomplete email<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"invalid-email@"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"submit-button"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue"</span>&gt;</span>validate<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h4 class="cd-text cd-title">pattern</h4>
+            <p class="cd-text">The pattern attribute allows you to define a valid field value via regex. When using a pattern it is not obvious to the user what pattern has been specified so we should always provide supporting information via some combination of labels, placeholders, and contextual help messages.</p>
+
+            <p class="cd-text">HTML5pattern.com has a <a href="http://html5pattern.com/Names">useful list of common patterns</a></p>
+
+
+            <form id="input-type" role="form" method="post" action="javascript:void(0);">
+    <div class="form-group">
+        <label for="pattern-demo" class="control-label">Try submitting an invalid hex colour value:</label>
+        <input type="text" class="form-control" id="pattern-demo" name="email" value="#invalid" pattern="^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$">
+        <small class="form-group__help-block">valid formats: #ccc, #cccccc</small>
+    </div>
+    <button type="submit" id="submit-button" class="button button--primary button--continue">validate</button>
+</form>
+            <br>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input-type"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"form"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"pattern-demo"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control-label"</span>&gt;</span>Try submitting an invalid hex colour value:<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"pattern-demo"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"#invalid"</span> <span class="hljs-attribute">pattern</span>=<span class="hljs-value">"^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">small</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group__help-block"</span>&gt;</span>valid formats: #ccc, #cccccc<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"submit-button"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue"</span>&gt;</span>validate<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+
+            <h4 class="cd-text cd-title">Required</h4>
+            <p class="cd-text">HTML5 capable browsers will flag inputs with this attribute as required and not allow the user to submit the form until the input has a value.</p>
+
+            <form id="input-type" role="form" method="post" action="javascript:void(0);">
+    <label for="required" class="control-label">Try submitting this empty field</label>
+    <div class="form-group">
+        <input type="text" class="form-control" id="required" name="required" required>
+    </div>
+    <button type="submit" id="submit-button" class="button button--primary button--continue">validate</button>
+</form>
+            <br>
+<pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input-type"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"form"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"javascript:void(0);"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"required"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"control-label"</span>&gt;</span>Try submitting this empty field<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-group"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"required"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"required"</span> <span class="hljs-attribute">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"submit-button"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--primary button--continue"</span>&gt;</span>validate<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+            <h3 class="cd-text cd-title">3) JavaScript validation</h3>
+            <p class="cd-text">HTML validation is fairly widely supported but only works on form submission. It's therefore a good idea to use some kind of JavaScript validation on your forms to provide some extra polish.</p>
+            <p class="cd-text">There are numerous libraries available to handle form validation but regardless of which one you use, or whether you roll your own, They should be used to duplicate your back end validation as much as possible and to provide useful feedback to the user while they are interacting with your form by adding the appropriate <a href="forms#validation-states">validation state</a> to fields as the user interacts with them.</p>
+
+            <h4 class="cd-text cd-title">good practices</h4>
+            <ul class="cd-text">
+                <li>Display success states as soon as the user has entered valid information to provide positive feedback and hopefully get them moving on to the next field</li>
+                <li>Correct error states as soon as they are fixed, do not wait for user to move focus out of the field before displaying a success state</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <ul class="page-footer__social">
+            <li><a class="link-meta" href="https://twitter.com/snack_overflow" title="follow graze tech on Twitter">
+                <span class="fa fa-twitter-square fa-2x"></span>
+                <span class="sr-only">follow graze tech on Twitter</span>
+            </a></li>
+            <li><a title="follow us on LinkedIn" class="link-meta" href="https://www.linkedin.com/company/graze-com">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+                <span class="sr-only">follow us on LinkedIn</span>
+            </a></li>
+            <li><a title="graze tech blog" class="link-meta" href="http://tech.graze.com">
+                <span class="fa fa-code fa-2x"></span>
+                <span class="sr-only">graze tech blog</span>
+            </a></li>
+            <li><a title="pistachio on github" class="link-meta" href="https://github.com/graze/pistachio/">
+                <span class="fa fa-github fa-2x"></span>
+                <span class="sr-only">pistachio on github</span>
+            </a></li>
+        </ul>
+        <ul class="page-footer__primary">
+            <li><a class="link-meta" href="../index.html">
+                principles
+            </a></li>
+            <li><a class="link-meta" href="../basics">
+                basics
+            </a></li>
+            <li><a class="link-meta" href="../components">
+                components
+            </a></li>
+            <li><a class="link-meta" href="../examples">
+                examples
+            </a></li>
+        </ul>
+    </div>
+</footer>
+
+<script data-main="/js/docs/require-config.js" src="../js/require.js" async></script>
+
+</body>
+</html>
